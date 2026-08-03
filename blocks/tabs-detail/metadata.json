@@ -1,0 +1,42 @@
+{
+  "variantName": "tabs-detail",
+  "baseBlock": "tabs",
+  "version": "1.0.0",
+  "created": "2026-08-03T00:00:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://wknd.site/us/en/adventures/bali-surf-camp.html",
+    "originPage": "WKND adventure detail page (Bali Surf Camp)",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "spacious",
+    "purpose": "content-body-tabs",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "tab label -> rich-text body panel (paragraphs, sub-headings, lists, inline images)",
+    "buttonCount": 0,
+    "imageCount": 1,
+    "tabs": "3",
+    "tabLabels": ["Overview", "Itinerary", "What to Bring"],
+    "panelContent": "long-form rich text: paragraphs, bold sub-headings, bullet lists, and inline images"
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "adventure detail body content (overview / itinerary / what to bring)",
+      "any tabbed switcher whose panels contain rich-text reading content with inline images",
+      "detail/article pages that split long-form body copy across tabs"
+    ],
+    "notSuitableFor": [
+      "category/filter tabs that reveal a grid of teaser cards (use tabs-adventure)",
+      "single non-interactive content block (use default content)"
+    ]
+  },
+  "notes": "Distinct from tabs-adventure: tabs-adventure is a light CATEGORY FILTER whose panels reveal cards-adventure grids (purpose adventure-filter, noimg). tabs-detail hosts rich-text body content with inline images on the adventure detail template. Shared across all 16 adventure detail pages.",
+  "usage": {
+    "pagesUsing": ["/us/en/adventures/bali-surf-camp"],
+    "reuseCount": 1,
+    "lastUsed": "2026-08-03T00:00:00.000Z"
+  }
+}

@@ -1,0 +1,48 @@
+/*
+ * columns-facts: adventure metadata facts list.
+ * Each row is a label/value pair (e.g. Activity / Surfing) rendered
+ * stacked with a left accent bar, small-caps label, and bold value.
+ * Based on the vanilla columns block layout.
+ */
+
+/* each fact row: label column + value column */
+.columns-facts > div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 24px;
+  padding-left: 16px;
+  border-left: 4px solid var(--facts-accent-color, #ffea00);
+}
+
+.columns-facts img {
+  width: 100%;
+}
+
+/* label (first cell) */
+.columns-facts > div > div:first-child {
+  order: 0;
+  font-size: var(--body-font-size-xs);
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--text-muted-color, #6a6a6a);
+}
+
+/* value (second cell) */
+.columns-facts > div > div:last-child {
+  order: 1;
+  font-weight: 700;
+}
+
+.columns-facts > div > div p {
+  margin: 0;
+}
+
+.columns-facts > div > .columns-facts-img-col {
+  order: 0;
+}
+
+.columns-facts > div > .columns-facts-img-col img {
+  display: block;
+}

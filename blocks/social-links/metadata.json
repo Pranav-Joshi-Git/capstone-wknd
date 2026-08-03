@@ -1,0 +1,40 @@
+{
+  "variantName": "social-links",
+  "baseBlock": "social-links",
+  "version": "1.0.0",
+  "created": "2026-08-03T00:00:00.000Z",
+  "custom": true,
+  "sourceContext": {
+    "originUrl": "https://wknd.site/us/en/about-us.html",
+    "originPage": "About Us (section-landing)",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "dark",
+    "density": "compact",
+    "purpose": "social-icon-row",
+    "imagePattern": "icon"
+  },
+  "contentPattern": {
+    "structure": "row of platform links (facebook / twitter / instagram) rendered as square icon buttons",
+    "buttonCount": 3,
+    "imageCount": 0
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "contributor/author cards on about-us",
+      "author byline and share rows on magazine-article pages",
+      "any row of social media icon links"
+    ],
+    "notSuitableFor": [
+      "text navigation link lists",
+      "call-to-action buttons with visible labels"
+    ]
+  },
+  "notes": "Bespoke capstone custom block. Renders authored social links as dark square icon buttons with inline SVGs for Facebook, Twitter, and Instagram. Platform is detected from the link href/text. Paired with the author block per contributor on the About Us page.",
+  "usage": {
+    "pagesUsing": ["/us/en/about-us", "/us/en/adventures/bali-surf-camp", "/us/en/magazine/western-australia"],
+    "reuseCount": 3,
+    "lastUsed": "2026-08-03T00:00:00.000Z"
+  }
+}
