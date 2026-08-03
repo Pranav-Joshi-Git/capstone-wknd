@@ -1,0 +1,42 @@
+{
+  "variantName": "article-list",
+  "baseBlock": "article-list",
+  "version": "1.0.0",
+  "created": "2026-08-03T00:00:00.000Z",
+  "custom": true,
+  "dynamic": true,
+  "sourceContext": {
+    "originUrl": "https://wknd.site/us/en.html",
+    "originPage": "WKND homepage",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "compact",
+    "purpose": "magazine-article-teaser-list",
+    "imagePattern": "large"
+  },
+  "contentPattern": {
+    "structure": "dynamic list of magazine articles (image + title + description) from query index",
+    "buttonCount": 0,
+    "imageCount": "dynamic",
+    "config": ["source", "index", "limit"]
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "homepage 'Recent Articles' section",
+      "magazine landing 'All Articles' grid",
+      "any auto-populated list of magazine articles from the query index"
+    ],
+    "notSuitableFor": [
+      "static hand-authored card grids (use cards / cards-adventure)",
+      "adventure detail listings"
+    ]
+  },
+  "notes": "Bespoke custom dynamic block (capstone requirement). Not derived from a vanilla Block Collection block; fetches entries from query-index.json filtered by magazine path prefix. Renders card-style teasers. Author configures source path prefix, index URL, and limit via block config rows.",
+  "usage": {
+    "pagesUsing": ["/us/en", "/us/en/magazine"],
+    "reuseCount": 2,
+    "lastUsed": "2026-08-03T00:00:00.000Z"
+  }
+}

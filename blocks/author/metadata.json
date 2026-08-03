@@ -1,0 +1,39 @@
+{
+  "variantName": "author",
+  "baseBlock": "author",
+  "version": "1.0.0",
+  "created": "2026-08-03T00:00:00.000Z",
+  "custom": true,
+  "sourceContext": {
+    "originUrl": "https://wknd.site/us/en/about-us.html",
+    "originPage": "About Us (section-landing)",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "spacious",
+    "purpose": "contributor-author-card",
+    "imagePattern": "avatar"
+  },
+  "contentPattern": {
+    "structure": "avatar image + name + title/role",
+    "buttonCount": 0,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "about-us contributor / team member cards",
+      "magazine-article author byline card (name, avatar, title)"
+    ],
+    "notSuitableFor": [
+      "product or article teaser grids (use cards / article-list)",
+      "social icon rows (use social-links)"
+    ]
+  },
+  "notes": "Bespoke capstone custom block (name, avatar, title). Not derived from a vanilla Block Collection block. On the About Us page it is authored once per contributor and paired with a following social-links block. Renders a centered card with a circular avatar.",
+  "usage": {
+    "pagesUsing": ["/us/en/about-us", "/us/en/magazine/western-australia"],
+    "reuseCount": 2,
+    "lastUsed": "2026-08-03T00:00:00.000Z"
+  }
+}

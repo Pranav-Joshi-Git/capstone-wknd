@@ -1,0 +1,10 @@
+{
+  "type": "da",
+  "sites": {
+    "capstone-wknd": {
+      "previewOrg": "pranav-joshi-git",
+      "previewSite": "capstone-wknd",
+      "libraryUrl": "https://main--sta-boilerplate--aemdemos.aem.page/tools/sidekick/library.json"
+    }
+  }
+}

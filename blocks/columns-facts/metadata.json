@@ -1,0 +1,41 @@
+{
+  "variantName": "columns-facts",
+  "baseBlock": "columns",
+  "version": "1.0.0",
+  "created": "2026-08-03T00:00:00.000Z",
+  "sourceContext": {
+    "originUrl": "https://wknd.site/us/en/adventures/bali-surf-camp.html",
+    "originPage": "WKND adventure detail page (Bali Surf Camp)",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "compact",
+    "purpose": "metadata-facts-list",
+    "imagePattern": "noimg"
+  },
+  "contentPattern": {
+    "structure": "repeating label/value rows (each row: label cell + value cell) with left accent bar, small-caps label above bold value",
+    "buttonCount": 0,
+    "imageCount": 0,
+    "rows": "6",
+    "labels": ["Activity", "Adventure Type", "Trip Length", "Group Size", "Difficulty", "Price"]
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "adventure detail metadata / facts sidebars (activity, difficulty, price, etc.)",
+      "any structured key/value spec list rendered as styled label-above-value rows",
+      "product or trip fact sheets with a fixed set of attributes"
+    ],
+    "notSuitableFor": [
+      "general side-by-side text/image layouts (use columns / columns-featured)",
+      "grids of self-contained image cards (use cards)"
+    ]
+  },
+  "notes": "Built on the vanilla columns base as a 2-column (label/value) table-style block. Source renders from an AEM Content Fragment definition-list (dl.cmp-contentfragment__elements). Repeated across all 16 adventure detail pages with the same 6 attributes; values differ per adventure.",
+  "usage": {
+    "pagesUsing": ["/us/en/adventures/bali-surf-camp"],
+    "reuseCount": 1,
+    "lastUsed": "2026-08-03T00:00:00.000Z"
+  }
+}

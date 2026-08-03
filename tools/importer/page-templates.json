@@ -1,0 +1,117 @@
+{
+  "metadata": {
+    "projectType": "da"
+  },
+  "templates": [
+    {
+      "name": "homepage",
+      "urls": [
+        "https://wknd.site/us/en.html"
+      ],
+      "representativeUrl": "https://wknd.site/us/en.html",
+      "coverageGaps": [],
+      "description": "Site home page: hero carousel, featured article teaser, recent-articles card list, adventure teaser, and next-adventures card list. Cards link to magazine articles and adventures.",
+      "blocks": [
+        { "name": "carousel-hero", "instances": ["div.carousel.cmp-carousel--hero"] },
+        { "name": "columns-featured", "instances": ["div.teaser.cmp-teaser--featured"] },
+        { "name": "article-list", "instances": ["main.cmp-layout-container--fixed:nth-of-type(1) div.image-list.list"] },
+        { "name": "hero-adventure", "instances": ["div.teaser.cmp-teaser--hero.cmp-teaser--imagebottom"] },
+        { "name": "cards-adventure", "instances": ["main.cmp-layout-container--fixed:nth-of-type(2) div.image-list.list"] }
+      ]
+    },
+    {
+      "name": "section-landing",
+      "urls": [
+        "https://wknd.site/us/en/about-us.html",
+        "https://wknd.site/us/en/magazine.html"
+      ],
+      "representativeUrl": "https://wknd.site/us/en/about-us.html",
+      "coverageGaps": [
+        {
+          "url": "https://wknd.site/us/en/magazine.html",
+          "sections": [
+            { "sectionSignature": "s(4x1)", "nodeMapId": "rc3" }
+          ]
+        }
+      ],
+      "description": "Standalone section landing page. About Us: intro heading/text plus contributor cards (name, title, social links). Magazine landing: heading plus a card grid of all articles.",
+      "blocks": [
+        { "name": "author", "instances": [".cmp-experience-fragment--contributor"] },
+        { "name": "social-links", "instances": [".cmp-experience-fragment--contributor div.cmp-buildingblock--btn-list"] },
+        { "name": "article-list", "instances": ["div.image-list.list"] }
+      ]
+    },
+    {
+      "name": "adventures-landing",
+      "urls": [
+        "https://wknd.site/us/en/adventures.html"
+      ],
+      "representativeUrl": "https://wknd.site/us/en/adventures.html",
+      "coverageGaps": [],
+      "description": "Adventures listing page: page title, intro teaser, and a filterable tabbed grid of adventure teaser cards linking to adventure detail pages.",
+      "blocks": [
+        { "name": "tabs-adventure", "instances": ["div.cmp-tabs"] },
+        { "name": "cards-adventure", "instances": ["div.cmp-tabs div.image-list.list"] }
+      ]
+    },
+    {
+      "name": "adventure-detail",
+      "urls": [
+        "https://wknd.site/us/en/adventures/bali-surf-camp.html",
+        "https://wknd.site/us/en/adventures/beervana-portland.html",
+        "https://wknd.site/us/en/adventures/climbing-new-zealand.html",
+        "https://wknd.site/us/en/adventures/colorado-rock-climbing.html",
+        "https://wknd.site/us/en/adventures/cycling-southern-utah.html",
+        "https://wknd.site/us/en/adventures/cycling-tuscany.html",
+        "https://wknd.site/us/en/adventures/downhill-skiing-wyoming.html",
+        "https://wknd.site/us/en/adventures/gastronomic-marais-tour.html",
+        "https://wknd.site/us/en/adventures/napa-wine-tasting.html",
+        "https://wknd.site/us/en/adventures/riverside-camping-australia.html",
+        "https://wknd.site/us/en/adventures/ski-touring-mont-blanc.html",
+        "https://wknd.site/us/en/adventures/surf-camp-costa-rica.html",
+        "https://wknd.site/us/en/adventures/tahoe-skiing.html",
+        "https://wknd.site/us/en/adventures/west-coast-cycling.html",
+        "https://wknd.site/us/en/adventures/whistler-mountain-biking.html",
+        "https://wknd.site/us/en/adventures/yosemite-backpacking.html"
+      ],
+      "representativeUrl": "https://wknd.site/us/en/adventures/bali-surf-camp.html",
+      "coverageGaps": [],
+      "description": "Adventure detail page: breadcrumb, hero image carousel with title, adventure metadata (activity, difficulty, price, etc.), share social links, and tabbed body content (overview, itinerary, what to bring).",
+      "blocks": [
+        { "name": "carousel-hero", "instances": ["div.carousel.cmp-carousel--mini"] },
+        { "name": "columns-facts", "instances": ["div.cmp-contentfragment--elements"] },
+        { "name": "social-links", "instances": ["main.cmp-layout-container--fixed div.cmp-buildingblock--btn-list"] },
+        { "name": "tabs-detail", "instances": ["main.cmp-layout-container--fixed div.cmp-tabs"] }
+      ]
+    },
+    {
+      "name": "magazine-article",
+      "urls": [
+        "https://wknd.site/us/en/magazine/western-australia.html",
+        "https://wknd.site/us/en/magazine/arctic-surfing.html",
+        "https://wknd.site/us/en/magazine/guide-la-skateparks.html",
+        "https://wknd.site/us/en/magazine/san-diego-surf.html",
+        "https://wknd.site/us/en/magazine/ski-touring.html"
+      ],
+      "representativeUrl": "https://wknd.site/us/en/magazine/western-australia.html",
+      "coverageGaps": [],
+      "description": "Magazine article page: hero image, breadcrumb, title with author byline, long-form article body (headings, paragraphs, blockquote, inline images), author/contributor block (name, title, social links), and a related-articles list.",
+      "blocks": [
+        { "name": "author", "instances": ["div.byline", "div.cmp-byline"] },
+        { "name": "social-links", "instances": ["article.cmp-article div.cmp-buildingblock--btn-list"] }
+      ]
+    },
+    {
+      "name": "faqs",
+      "urls": [
+        "https://wknd.site/us/en/faqs.html"
+      ],
+      "representativeUrl": "https://wknd.site/us/en/faqs.html",
+      "coverageGaps": [],
+      "description": "FAQ page: title, intro image and text, an accordion of question/answer items, and a contact help section.",
+      "blocks": [
+        { "name": "accordion-faq", "instances": ["div.accordion.cmp-accordion", "div.cmp-accordion"] }
+      ]
+    }
+  ]
+}
