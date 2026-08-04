@@ -173,12 +173,11 @@ body.magazine-article .author .author-card .social-links {
     padding: 0;
   }
 
-  /* title: row 1, left-aligned; sits in the right content column area */
+  /* title: row 1, right column, single line (aligns with tabs + body) */
   body.adventure-detail main > .section.tabs-detail-container > .default-content-wrapper:has(+ .columns-facts-wrapper) {
-    grid-column: 1 / -1;
+    grid-column: 2;
     grid-row: 1;
-    justify-self: start;
-    width: 40%;
+    white-space: nowrap;
     text-align: left;
   }
 
