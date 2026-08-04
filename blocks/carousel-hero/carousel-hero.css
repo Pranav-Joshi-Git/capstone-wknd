@@ -43,6 +43,11 @@
   object-fit: cover;
 }
 
+/* hide the white card when the slide has no text content (image-only slides) */
+.carousel-hero .carousel-hero-slide-content:not(:has(h1, h2, h3, h4, h5, h6, p, a)) {
+  display: none;
+}
+
 .carousel-hero .carousel-hero-slide .carousel-hero-slide-content {
   z-index: 1;
   margin: 0;

@@ -149,29 +149,56 @@ body.magazine-article .author .author-card .social-links {
 
 /* ===== Adventure detail page (body.adventure-detail) ===== */
 
-/* full-bleed hero carousel + title span the section; facts + tabs form 2 columns */
+/* full-bleed hero carousel + title span the section; facts + tabs form 2 columns.
+   The section is the grid container; its wrappers are the grid items. */
 @media (width >= 900px) {
-  body.adventure-detail main > .section > div {
+  body.adventure-detail main > .section.tabs-detail-container {
     display: grid;
     grid-template-columns: 300px 1fr;
     column-gap: 48px;
     align-items: start;
-    max-width: 1200px;
   }
 
-  /* carousel-hero and h1 span the full width (top rows) */
-  body.adventure-detail main > .section > div > .carousel-hero-wrapper,
-  body.adventure-detail main > .section > div > .default-content-wrapper {
+  /* carousel-hero: full width, row 1 */
+  body.adventure-detail main > .section > .carousel-hero-wrapper {
     grid-column: 1 / -1;
+    grid-row: 1;
   }
 
-  /* facts -> left sidebar */
-  body.adventure-detail main > .section > div > .columns-facts-wrapper {
+  /* title (first default-content): full width, row 2 */
+  body.adventure-detail main > .section > .default-content-wrapper:nth-of-type(1) {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+
+  /* facts -> left column, row 3 */
+  body.adventure-detail main > .section > .columns-facts-wrapper {
     grid-column: 1;
+    grid-row: 3;
   }
 
-  /* tabbed body -> right column */
-  body.adventure-detail main > .section > div > .tabs-detail-wrapper {
-    grid-column: 2;
+  /* "Share this Adventure" (second default-content) -> left column, row 4 */
+  body.adventure-detail main > .section > .default-content-wrapper:nth-of-type(2) {
+    grid-column: 1;
+    grid-row: 4;
   }
+
+  /* tabbed body -> right column, spanning the facts + share rows */
+  body.adventure-detail main > .section > .tabs-detail-wrapper {
+    grid-column: 2;
+    grid-row: 3 / span 2;
+  }
+}
+
+/* title (h1) yellow underline on adventure detail */
+body.adventure-detail main h1 {
+  margin-bottom: 8px;
+}
+
+body.adventure-detail main h1::after {
+  content: '';
+  display: block;
+  width: 84px;
+  padding-top: 8px;
+  border-bottom: 2px solid #ffea00;
 }
