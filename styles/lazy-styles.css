@@ -163,10 +163,12 @@ body.magazine-article .author .author-card .social-links {
     align-items: start;
   }
 
-  /* title: spans full width, row 1 */
+  /* title: spans full width, row 1, aligned to the left edge */
   body.adventure-detail main > .section.tabs-detail-container > .default-content-wrapper:has(+ .columns-facts-wrapper) {
     grid-column: 1 / -1;
     grid-row: 1;
+    justify-self: stretch;
+    width: 100%;
     text-align: left;
   }
 
