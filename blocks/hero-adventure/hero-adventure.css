@@ -4,31 +4,28 @@
 
 .hero-adventure {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
-  min-height: min(46vw, 640px);
   padding: 0;
 }
 
-/* full-bleed background image */
+/* background image in normal flow (reserves height) */
 .hero-adventure .hero-adventure-image {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
+  line-height: 0;
 }
 
 .hero-adventure .hero-adventure-image picture,
 .hero-adventure .hero-adventure-image img {
   width: 100%;
-  height: 100%;
+  height: min(46vw, 640px);
   object-fit: cover;
   display: block;
 }
 
-/* white content card, centered at the bottom of the image (same as carousel) */
+/* white content card, overlaid centered at the bottom of the image */
 .hero-adventure .hero-adventure-content {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
   z-index: 1;
   width: min(80%, 900px);
   height: 180px;
