@@ -120,7 +120,8 @@ export default async function decorate(block) {
       <button type="button" class="slide-next" aria-label="Next Slide"></button>
     `;
 
-    container.append(slideNavButtons);
+    // place nav buttons on the block (below the image), not over the image
+    block.append(slideNavButtons);
   }
 
   rows.forEach((row, idx) => {
