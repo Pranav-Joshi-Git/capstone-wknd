@@ -20,7 +20,7 @@
   --link-hover-color: #1d3ecf;
 
   /* fonts */
-  --body-font-family: roboto, roboto-fallback, sans-serif;
+  --body-font-family: 'Source Sans 3', 'Source Sans Pro', 'Helvetica Neue', helvetica, arial, sans-serif;
   --heading-font-family: asar, georgia, 'Times New Roman', times, serif;
 
   /* body sizes */
