@@ -1,1 +1,121 @@
 /* add global styles that can be loaded post LCP here */
+
+/* ===== Magazine article page (body.magazine-article) ===== */
+
+/* centered ~776px reading column */
+body.magazine-article main > .section > div {
+  max-width: 800px;
+}
+
+/* article title */
+body.magazine-article main h1 {
+  font-family: var(--heading-font-family);
+  font-weight: 400;
+  font-size: 40px;
+  margin-bottom: 4px;
+}
+
+/* author byline (h4 "By ...") */
+body.magazine-article main h1 + h4,
+body.magazine-article main h4:first-of-type {
+  font-family: var(--body-font-family);
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #202020;
+  margin: 0 0 32px;
+}
+
+/* body copy: generous line height */
+body.magazine-article main article p,
+body.magazine-article main .default-content-wrapper > p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #202020;
+  margin: 0 0 1.4em;
+}
+
+/* section subheadings */
+body.magazine-article main article h2 {
+  font-family: var(--heading-font-family);
+  font-weight: 400;
+  font-size: 32px;
+  margin: 1em 0 0.5em;
+}
+
+/* pull quote */
+body.magazine-article main blockquote {
+  margin: 32px 0;
+  padding: 0;
+  border: 0;
+  font-size: 26px;
+  line-height: 1.4;
+  font-style: italic;
+  color: #202020;
+}
+
+/* two-column layout: article body (section 1) left, related-articles sidebar right.
+   Section 1 contains the body default-content + the related-articles block. */
+@media (width >= 900px) {
+  body.magazine-article main > .section:has(.related-articles) > div {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 260px;
+    column-gap: 56px;
+    align-items: start;
+    max-width: 1100px;
+  }
+
+  /* body content -> left column */
+  body.magazine-article main > .section:has(.related-articles) > .default-content-wrapper {
+    grid-column: 1;
+  }
+
+  /* related-articles sidebar -> right column, sticky */
+  body.magazine-article main > .section:has(.related-articles) > .related-articles-wrapper {
+    grid-column: 2;
+    position: sticky;
+    top: 24px;
+  }
+
+  /* author section: full width, constrained */
+  body.magazine-article main > .section:has(.author) > div {
+    max-width: 1100px;
+  }
+}
+
+/* article author byline: horizontal card (avatar left, name/title, social right) */
+body.magazine-article .author {
+  border-top: 1px solid #ebebeb;
+  padding-top: 32px;
+  text-align: left;
+}
+
+body.magazine-article .author .author-card {
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 16px;
+}
+
+body.magazine-article .author .author-avatar {
+  width: 64px;
+  height: 64px;
+  margin: 0;
+}
+
+body.magazine-article .author .author-name {
+  margin: 0;
+  font-size: 20px;
+}
+
+body.magazine-article .author .author-title {
+  margin: 0;
+  flex-basis: 100%;
+  order: 3;
+}
+
+/* social pushed to the right on the byline */
+body.magazine-article .author .author-card .social-links {
+  margin-left: auto;
+}
+
