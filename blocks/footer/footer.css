@@ -79,23 +79,19 @@ footer .social-links .social-links-list {
   gap: 16px;
 }
 
-footer .social-links .social-links-icon {
+footer .social-links a.social-links-icon:any-link {
   width: 32px;
   height: 32px;
   background-color: transparent;
-  color: #202020;
+  color: #000;
+  text-decoration: none;
   border-radius: 0;
 }
 
 footer .social-links .social-links-icon svg {
   width: 24px;
   height: 24px;
-}
-
-footer .social-links .social-links-icon:hover,
-footer .social-links .social-links-icon:focus {
-  background-color: transparent;
-  color: #000;
+  fill: #000;
 }
 
 /* desktop: brand | nav | follow-us in one row */
