@@ -164,6 +164,15 @@ export default async function decorate(block) {
   toggleMenu(nav, navSections, isDesktop.matches);
   isDesktop.addEventListener('change', () => toggleMenu(nav, navSections, isDesktop.matches));
 
+  // mark the nav link matching the current page (and its child pages) as active
+  const currentPath = window.location.pathname.replace(/\.html$/, '').replace(/\/$/, '');
+  navSections?.querySelectorAll('.default-content-wrapper > ul > li a').forEach((a) => {
+    const linkPath = new URL(a.href, window.location).pathname.replace(/\.html$/, '').replace(/\/$/, '');
+    if (linkPath && (currentPath === linkPath || currentPath.startsWith(`${linkPath}/`))) {
+      a.closest('li').classList.add('nav-active');
+    }
+  });
+
   const navWrapper = document.createElement('div');
   navWrapper.className = 'nav-wrapper';
   navWrapper.append(nav);
