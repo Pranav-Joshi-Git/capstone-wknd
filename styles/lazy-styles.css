@@ -106,31 +106,42 @@ body.magazine-article .author {
 }
 
 body.magazine-article .author .author-card {
-  flex-flow: row wrap;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-template-rows: auto auto;
   align-items: center;
-  justify-content: flex-start;
-  gap: 16px;
+  gap: 2px 16px;
+  text-align: left;
 }
 
+/* avatar spans both text rows on the left */
 body.magazine-article .author .author-avatar {
-  width: 64px;
-  height: 64px;
+  grid-column: 1;
+  grid-row: 1 / span 2;
+  width: 56px;
+  height: 56px;
   margin: 0;
 }
 
+/* name top row, title bottom row (column 2) */
 body.magazine-article .author .author-name {
+  grid-column: 2;
+  grid-row: 1;
   margin: 0;
   font-size: 20px;
+  align-self: end;
 }
 
 body.magazine-article .author .author-title {
+  grid-column: 2;
+  grid-row: 2;
   margin: 0;
-  flex-basis: 100%;
-  order: 3;
+  align-self: start;
 }
 
-/* social pushed to the right on the byline */
+/* social icons far right, spanning both rows */
 body.magazine-article .author .author-card .social-links {
-  margin-left: auto;
+  grid-column: 3;
+  grid-row: 1 / span 2;
 }
 
