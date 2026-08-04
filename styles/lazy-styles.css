@@ -2,12 +2,12 @@
 
 /* ===== Magazine article page (body.magazine-article) ===== */
 
-/* centered ~776px reading column */
+/* article sections: wide content container */
 body.magazine-article main > .section > div {
-  max-width: 800px;
+  max-width: 1100px;
 }
 
-/* hero image: first section, full content width, no extra spacing */
+/* hero image: first section, wide, no extra spacing */
 body.magazine-article main > .section:first-child {
   margin-top: 0;
 }
