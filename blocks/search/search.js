@@ -44,16 +44,20 @@ export default async function decorate(block) {
   const form = document.createElement('div');
   form.className = 'search-box';
 
+  const icon = document.createElement('span');
+  icon.className = 'search-icon';
+  icon.setAttribute('aria-hidden', 'true');
+
   const input = document.createElement('input');
   input.type = 'search';
-  input.placeholder = 'Search';
+  input.placeholder = 'SEARCH';
   input.setAttribute('aria-label', 'Search');
 
   const results = document.createElement('div');
   results.className = 'search-results';
   results.setAttribute('hidden', '');
 
-  form.append(input, results);
+  form.append(icon, input, results);
   block.append(form);
 
   let index = null;
