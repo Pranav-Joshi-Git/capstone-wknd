@@ -31,9 +31,9 @@ footer .footer .section {
 
 /* brand wordmark (section 1) */
 footer .footer .section:nth-child(1) a:any-link {
-  font-size: 42px;
+  font-size: 56px;
   font-weight: 700;
-  letter-spacing: 0.12em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 
@@ -68,34 +68,44 @@ footer .footer .section:nth-child(4) p {
   color: #f7f7f7;
 }
 
-/* social-links block: light square icons */
+/* social-links block: one continuous light strip, dark icons always visible */
+footer .social-links {
+  background-color: #ebebeb;
+  padding: 8px 12px;
+}
+
 footer .social-links .social-links-list {
   justify-content: flex-start;
-  gap: 8px;
+  gap: 16px;
 }
 
 footer .social-links .social-links-icon {
-  width: 48px;
-  height: 48px;
-  background-color: #ebebeb;
+  width: 32px;
+  height: 32px;
+  background-color: transparent;
   color: #202020;
   border-radius: 0;
 }
 
+footer .social-links .social-links-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
 footer .social-links .social-links-icon:hover,
 footer .social-links .social-links-icon:focus {
-  background-color: #fff;
-  color: #202020;
+  background-color: transparent;
+  color: #000;
 }
 
 /* desktop: brand | nav | follow-us in one row */
 @media (width >= 900px) {
   footer .footer > div {
-    padding: 40px 32px 24px;
+    padding: 24px 32px;
     display: grid;
-    grid-template-columns: auto 1fr auto;
+    grid-template-columns: auto auto 1fr;
     align-items: center;
-    column-gap: 40px;
+    column-gap: 80px;
   }
 
   footer .footer .section {
@@ -108,10 +118,12 @@ footer .social-links .social-links-icon:focus {
     margin-top: 24px;
   }
 
+  /* Follow Us (section 3): pushed far right, heading inline with icons */
   footer .footer .section:nth-child(3) {
     display: flex;
     align-items: center;
     gap: 16px;
+    justify-self: end;
   }
 
   footer .footer .section:nth-child(3) h4 {
