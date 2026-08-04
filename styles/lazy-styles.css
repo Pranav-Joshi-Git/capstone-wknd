@@ -152,43 +152,50 @@ body.magazine-article .author .author-card .social-links {
 /* full-bleed hero carousel + title span the section; facts + tabs form 2 columns.
    The section is the grid container; its wrappers are the grid items. */
 @media (width >= 900px) {
+  /* content section (title + facts + share + tabs) is the grid; carousel is a
+     separate full-width section above and is NOT part of this grid */
   body.adventure-detail main > .section.tabs-detail-container {
     display: grid;
     grid-template-columns: 300px 1fr;
-    grid-template-rows: auto auto auto 1fr;
+    grid-template-rows: auto auto 1fr;
     column-gap: 48px;
     align-items: start;
   }
 
-  /* carousel-hero: full width, row 1 */
-  body.adventure-detail main > .section > .carousel-hero-wrapper {
+  /* title: spans full width, row 1 */
+  body.adventure-detail main > .section.tabs-detail-container > .default-content-wrapper:has(+ .columns-facts-wrapper) {
     grid-column: 1 / -1;
     grid-row: 1;
   }
 
-  /* title (default-content immediately before facts): full width, row 2 */
-  body.adventure-detail main > .section > .default-content-wrapper:has(+ .columns-facts-wrapper) {
-    grid-column: 1 / -1;
+  /* facts -> left column, row 2 */
+  body.adventure-detail main > .section.tabs-detail-container > .columns-facts-wrapper {
+    grid-column: 1;
     grid-row: 2;
   }
 
-  /* facts -> left column, row 3 (natural height) */
-  body.adventure-detail main > .section > .columns-facts-wrapper {
+  /* "Share this Adventure" -> left column, row 3 (right below facts) */
+  body.adventure-detail main > .section.tabs-detail-container > .columns-facts-wrapper + .default-content-wrapper {
     grid-column: 1;
     grid-row: 3;
   }
 
-  /* "Share this Adventure" -> left column, row 4 (right below facts) */
-  body.adventure-detail main > .section > .columns-facts-wrapper + .default-content-wrapper {
-    grid-column: 1;
-    grid-row: 4;
-  }
-
-  /* tabbed body -> right column, spanning rows 3-4 (aligned with top of facts) */
-  body.adventure-detail main > .section > .tabs-detail-wrapper {
+  /* tabbed body -> right column, spanning facts + share rows */
+  body.adventure-detail main > .section.tabs-detail-container > .tabs-detail-wrapper {
     grid-column: 2;
-    grid-row: 3 / -1;
+    grid-row: 2 / -1;
   }
+}
+
+/* "Share this Adventure" heading: uppercase, small, right below facts */
+body.adventure-detail .columns-facts-wrapper + .default-content-wrapper h5 {
+  margin: 24px 0 0;
+  font-family: var(--body-font-family);
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: #202020;
 }
 
 /* title (h1) yellow underline on adventure detail */
