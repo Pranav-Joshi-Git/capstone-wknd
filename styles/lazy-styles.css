@@ -157,37 +157,51 @@ body.magazine-article .author .author-card .social-links {
   body.adventure-detail main > .section.tabs-detail-container {
     display: grid;
     grid-template-columns: 300px 1fr;
-    grid-template-rows: auto auto auto;
     column-gap: 48px;
     align-content: start;
     align-items: start;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 24px;
   }
 
-  /* title: spans full width, row 1, aligned to the left edge */
+  /* the global "main > .section > div { max-width; margin:auto; padding }" rule
+     centers each grid item in its cell — neutralize it so the grid controls layout */
+  body.adventure-detail main > .section.tabs-detail-container > div {
+    max-width: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* title: row 1, left-aligned; sits in the right content column area */
   body.adventure-detail main > .section.tabs-detail-container > .default-content-wrapper:has(+ .columns-facts-wrapper) {
     grid-column: 1 / -1;
     grid-row: 1;
-    justify-self: stretch;
-    width: 100%;
+    justify-self: start;
+    width: 40%;
     text-align: left;
   }
 
-  /* facts -> left column, row 2 */
+  /* facts -> left column, row 2, pinned to top */
   body.adventure-detail main > .section.tabs-detail-container > .columns-facts-wrapper {
     grid-column: 1;
     grid-row: 2;
+    align-self: start;
   }
 
-  /* "Share this Adventure" -> left column, row 3 (directly below facts) */
+  /* "Share this Adventure" (if present) -> left column, row 3 */
   body.adventure-detail main > .section.tabs-detail-container > .columns-facts-wrapper + .default-content-wrapper {
     grid-column: 1;
     grid-row: 3;
+    align-self: start;
   }
 
-  /* tabbed body -> right column, spans facts + share rows (row 2 to end) */
+  /* tabbed body -> right column, row 2, own height (no row-spanning so tab
+     switches don't shift the grid) */
   body.adventure-detail main > .section.tabs-detail-container > .tabs-detail-wrapper {
     grid-column: 2;
-    grid-row: 2 / 4;
+    grid-row: 2 / span 2;
+    align-self: start;
   }
 }
 
