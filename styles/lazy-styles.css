@@ -155,6 +155,7 @@ body.magazine-article .author .author-card .social-links {
   body.adventure-detail main > .section.tabs-detail-container {
     display: grid;
     grid-template-columns: 300px 1fr;
+    grid-template-rows: auto auto auto 1fr;
     column-gap: 48px;
     align-items: start;
   }
@@ -171,22 +172,22 @@ body.magazine-article .author .author-card .social-links {
     grid-row: 2;
   }
 
-  /* facts -> left column, row 3 */
+  /* facts -> left column, row 3 (natural height) */
   body.adventure-detail main > .section > .columns-facts-wrapper {
     grid-column: 1;
     grid-row: 3;
   }
 
-  /* "Share this Adventure" (default-content right after facts) -> left column, row 4 */
+  /* "Share this Adventure" -> left column, row 4 (right below facts) */
   body.adventure-detail main > .section > .columns-facts-wrapper + .default-content-wrapper {
     grid-column: 1;
     grid-row: 4;
   }
 
-  /* tabbed body -> right column, spanning the facts + share rows */
+  /* tabbed body -> right column, spanning rows 3-4 (aligned with top of facts) */
   body.adventure-detail main > .section > .tabs-detail-wrapper {
     grid-column: 2;
-    grid-row: 3 / span 2;
+    grid-row: 3 / -1;
   }
 }
 
