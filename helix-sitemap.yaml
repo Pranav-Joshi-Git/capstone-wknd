@@ -1,0 +1,8 @@
+version: 1
+
+sitemaps:
+  default:
+    origin: https://main--capstone-wknd--pranav-joshi-git.aem.live
+    source: /query-index.json
+    destination: /sitemap.xml
+    lastmod: YYYY-MM-DD

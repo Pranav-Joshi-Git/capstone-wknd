@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://main--capstone-wknd--pranav-joshi-git.aem.live/sitemap.xml
