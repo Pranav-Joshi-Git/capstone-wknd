@@ -57,29 +57,34 @@ body.magazine-article main blockquote {
 /* two-column layout: article body (section 1) left, related-articles sidebar right.
    Section 1 contains the body default-content + the related-articles block. */
 @media (width >= 900px) {
-  body.magazine-article main > .section:has(.related-articles) > div {
+  /* the SECTION is the grid; its wrappers are the two columns */
+  body.magazine-article main > .section.related-articles-container {
     display: grid;
     grid-template-columns: minmax(0, 1fr) 260px;
     column-gap: 56px;
     align-items: start;
     max-width: 1100px;
+    margin-inline: auto;
+    padding: 0 32px;
+  }
+
+  /* wrappers shouldn't re-apply section max-width/padding */
+  body.magazine-article main > .section.related-articles-container > div {
+    max-width: none;
+    padding: 0;
+    margin: 0;
   }
 
   /* body content -> left column */
-  body.magazine-article main > .section:has(.related-articles) > .default-content-wrapper {
+  body.magazine-article main > .section.related-articles-container > .default-content-wrapper {
     grid-column: 1;
   }
 
   /* related-articles sidebar -> right column, sticky */
-  body.magazine-article main > .section:has(.related-articles) > .related-articles-wrapper {
+  body.magazine-article main > .section.related-articles-container > .related-articles-wrapper {
     grid-column: 2;
     position: sticky;
     top: 24px;
-  }
-
-  /* author section: full width, constrained */
-  body.magazine-article main > .section:has(.author) > div {
-    max-width: 1100px;
   }
 }
 
