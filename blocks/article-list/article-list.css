@@ -1,3 +1,15 @@
+/* "All Articles" link (default-content wrapper right after the article grid) -> yellow button */
+.article-list-wrapper + .default-content-wrapper a:any-link {
+  display: inline-block;
+  padding: 12px 28px;
+  background-color: #ffea00;
+  color: #202020;
+  font-weight: 600;
+  font-size: 13px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
 .article-list > ul {
   list-style: none;
   margin: 0;
@@ -47,6 +59,7 @@
   letter-spacing: normal;
 }
 
+/* stylelint-disable-next-line no-descending-specificity */
 .article-list .article-list-card-body h3 a {
   color: #202020;
   text-decoration: none;
