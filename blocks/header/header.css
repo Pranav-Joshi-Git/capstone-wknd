@@ -225,7 +225,7 @@ header nav .nav-sections ul > li > ul > li {
 
   header nav .nav-sections ul {
     display: flex;
-    gap: 24px;
+    gap: 8px;
     margin: 0;
   }
 
@@ -277,8 +277,8 @@ header nav .nav-tools {
 /* WKND wordmark brand */
 header .nav-brand a:any-link {
   font-weight: 700;
-  font-size: 28px;
-  letter-spacing: 0.08em;
+  font-size: 42px;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: #202020;
   text-decoration: none;
@@ -287,8 +287,9 @@ header .nav-brand a:any-link {
 /* nav links: uppercase */
 header nav .nav-sections .default-content-wrapper > ul > li {
   text-transform: uppercase;
-  letter-spacing: 0.03em;
+  letter-spacing: normal;
   font-size: 14px;
+  font-weight: 400;
 }
 
 /* group nav sections + tools to the right (brand stays left) */
@@ -303,9 +304,10 @@ header nav .nav-sections .default-content-wrapper > ul > li {
   }
 }
 
-/* WKND yellow highlight on hover/focus */
+/* WKND yellow highlight on hover/focus (full-height box) */
 header nav .nav-sections .default-content-wrapper > ul > li > a {
-  padding: 4px 8px;
+  display: block;
+  padding: 15px 17px;
   transition: background-color 0.1s ease;
 }
 
