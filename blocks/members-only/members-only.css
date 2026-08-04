@@ -1,0 +1,118 @@
+.members-only {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48px;
+  max-width: 720px;
+}
+
+/* locked look: whole card slightly dimmed */
+.members-only .members-only-card {
+  display: block;
+  opacity: 0.55;
+}
+
+/* header: lock badge + title inline */
+.members-only .members-only-header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+  padding-left: 44px;
+  min-height: 40px;
+}
+
+.members-only .members-only-header h1,
+.members-only .members-only-header h2,
+.members-only .members-only-header h3,
+.members-only .members-only-header h4,
+.members-only .members-only-header h5,
+.members-only .members-only-header h6 {
+  margin: 0;
+  font-family: var(--body-font-family);
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #202020;
+}
+
+/* yellow lock badge (folded-corner style) */
+.members-only .members-only-lock {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 40px;
+  height: 40px;
+  background: #ffea00;
+
+  /* folded corner: full top-left, cut bottom-right */
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+}
+
+.members-only .members-only-lock::after {
+  content: '';
+  position: absolute;
+  left: 9px;
+  top: 8px;
+  width: 12px;
+  height: 10px;
+  border: 2px solid #202020;
+  border-radius: 0 0 2px 2px;
+  box-sizing: border-box;
+}
+
+.members-only .members-only-lock::before {
+  content: '';
+  position: absolute;
+  left: 12px;
+  top: 3px;
+  width: 6px;
+  height: 8px;
+  border: 2px solid #202020;
+  border-bottom: 0;
+  border-radius: 4px 4px 0 0;
+  box-sizing: border-box;
+}
+
+.members-only .members-only-desc {
+  font-size: 14px;
+  color: #202020;
+  margin-bottom: 16px;
+}
+
+.members-only .members-only-desc p {
+  margin: 0;
+}
+
+/* READ MORE grey button */
+.members-only .members-only-cta a.button {
+  display: inline-block;
+  padding: 8px 14px;
+  background: #ebebeb;
+  color: #202020;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  border-radius: 0;
+}
+
+.members-only .members-only-cta a.button:hover {
+  background: #ddd;
+}
+
+.members-only .members-only-image {
+  margin-top: 24px;
+}
+
+.members-only .members-only-image img {
+  width: 100%;
+  display: block;
+}
+
+@media (width >= 900px) {
+  .members-only {
+    grid-template-columns: 1fr 1fr;
+  }
+}

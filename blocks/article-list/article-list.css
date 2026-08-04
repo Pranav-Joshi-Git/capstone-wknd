@@ -7,6 +7,19 @@
   gap: 24px;
 }
 
+/* yellow underline on section headings (All Articles / Members Only) */
+.section:has(.article-list) .default-content-wrapper h2 {
+  margin-bottom: 8px;
+}
+
+.section:has(.article-list) .default-content-wrapper h2::after {
+  content: '';
+  display: block;
+  width: 84px;
+  padding-top: 8px;
+  border-bottom: 2px solid #ffea00;
+}
+
 .article-list > ul > li {
   background-color: var(--background-color);
 }
@@ -27,18 +40,31 @@
 
 .article-list .article-list-card-body h3 {
   margin: 0 0 8px;
-  font-size: var(--body-font-size-s);
+  font-family: var(--body-font-family);
+  font-size: 18px;
+  font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: normal;
 }
 
 .article-list .article-list-card-body h3 a {
-  color: var(--text-color);
+  color: #202020;
   text-decoration: none;
+}
+
+.article-list .article-list-card-body h3 a:hover {
+  text-decoration: underline;
 }
 
 .article-list .article-list-card-body p {
   margin: 0;
-  font-size: var(--body-font-size-xs);
-  color: #6d6d6d;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #202020;
+
+  /* single-line truncation with ellipsis (matches live site) */
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }

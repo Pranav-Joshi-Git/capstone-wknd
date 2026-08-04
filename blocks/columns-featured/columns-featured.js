@@ -2,7 +2,7 @@ export default function decorate(block) {
   const cols = [...block.firstElementChild.children];
   block.classList.add(`columns-featured-${cols.length}-cols`);
 
-  // setup image columns
+  // setup image + text columns
   [...block.children].forEach((row) => {
     [...row.children].forEach((col) => {
       const pic = col.querySelector('picture');
@@ -12,6 +12,9 @@ export default function decorate(block) {
           // picture is only content in column
           picWrapper.classList.add('columns-featured-img-col');
         }
+      } else {
+        // non-image column is the text/content column
+        col.classList.add('columns-featured-text');
       }
     });
   });
