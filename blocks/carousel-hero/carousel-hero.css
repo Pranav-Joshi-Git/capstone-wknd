@@ -97,19 +97,23 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 6px 10px;
-  padding: 16px 12px;
+  gap: 0 2px;
+  padding: 8px 12px;
   background-color: transparent;
   line-height: 0;
 }
 
+/* 24x24 transparent tap target (a11y), with an 8px visible dot drawn in the
+   content box via padding + background-clip */
 .carousel-hero .carousel-hero-slide-indicator button {
-  width: 8px;
-  height: 8px;
+  width: 24px;
+  height: 24px;
   margin: 0;
-  padding: 0;
+  padding: 8px;
+  border: 0;
   border-radius: 50%;
   background-color: #cfcfcf;
+  background-clip: content-box;
   transition: background-color 0.2s;
 }
 
