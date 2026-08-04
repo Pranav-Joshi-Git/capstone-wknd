@@ -58,9 +58,8 @@ export default async function decorate(block) {
   const ul = document.createElement('ul');
   ul.className = 'related-articles-list';
 
-  articles.forEach((article, i) => {
+  articles.forEach((article) => {
     const li = document.createElement('li');
-    if (i === 0) li.classList.add('related-articles-featured');
 
     const link = document.createElement('a');
     link.href = article.path;
