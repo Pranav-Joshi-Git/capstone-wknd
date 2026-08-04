@@ -1,56 +1,47 @@
 .tabs-adventure .tabs-adventure-list {
   display: flex;
-  gap: 0.5ch;
+  flex-wrap: wrap;
+  gap: 8px 12px;
   max-width: 100%;
-  font-size: var(--body-font-size-xs);
-  overflow-x: auto;
-}
-
-@media (width >= 600px) {
-  .tabs-adventure .tabs-adventure-list {
-    font-size: var(--body-font-size-s);
-  }
-}
-
-@media (width >= 900px) {
-  .tabs-adventure .tabs-adventure-list {
-    font-size: var(--body-font-size-m);
-  }
+  margin-bottom: 32px;
 }
 
 .tabs-adventure .tabs-adventure-list button {
-  flex: 0 0 max-content;
+  flex: 0 0 auto;
   margin: 0;
-  border: 1px solid #dadada;
+  border: 0;
   border-radius: 0;
-  padding: 0.5em;
-  background-color: var(--light-color);
-  color: initial;
-  font-weight: bold;
-  line-height: unset;
-  text-align: initial;
-  text-overflow: unset;
-  overflow: unset;
-  white-space: unset;
-  transition: background-color 0.2s;
+  padding: 8px 16px;
+  background-color: transparent;
+  color: #202020;
+  font-family: var(--body-font-family);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  line-height: 1.2;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
 }
 
 .tabs-adventure .tabs-adventure-list button p {
   margin: 0;
 }
 
+.tabs-adventure .tabs-adventure-list button:hover {
+  background-color: #ebebeb;
+}
 
+/* active tab: black background, white text */
 .tabs-adventure .tabs-adventure-list button[aria-selected='true'] {
-  border-bottom: 1px solid var(--background-color);
-  background-color: var(--background-color);
-  cursor: initial;
+  background-color: #202020;
+  color: #fff;
+  cursor: default;
 }
 
 .tabs-adventure .tabs-adventure-panel {
-  margin-top: -1px;
-  padding: 24px;
-  border: 1px solid #dadada;
-  overflow: auto;
+  padding: 0;
+  overflow: visible;
 }
 
 .tabs-adventure .tabs-adventure-panel[aria-hidden='true'] {

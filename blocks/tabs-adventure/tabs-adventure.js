@@ -1,5 +1,5 @@
 // eslint-disable-next-line import/no-unresolved
-import { toClassName } from '../../scripts/aem.js';
+import { toClassName, decorateBlock, loadBlock } from '../../scripts/aem.js';
 
 export default async function decorate(block) {
   // build tablist
@@ -46,4 +46,13 @@ export default async function decorate(block) {
   });
 
   block.prepend(tablist);
+
+  // decorate + load the nested cards-adventure blocks inside each tab panel
+  // (nested blocks aren't auto-decorated by the EDS pipeline)
+  await Promise.all(
+    [...block.querySelectorAll('.cards-adventure')].map(async (nested) => {
+      decorateBlock(nested);
+      await loadBlock(nested);
+    }),
+  );
 }
