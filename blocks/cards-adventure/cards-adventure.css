@@ -1,3 +1,23 @@
+/* contract the "Where do you want to go?" group to 80% (matches the hero card width) */
+.default-content-wrapper:has(+ .cards-adventure-wrapper),
+.cards-adventure-wrapper,
+.cards-adventure-wrapper + .default-content-wrapper {
+  width: 80%;
+  margin-inline: auto;
+}
+
+/* "All Trips" link (default-content wrapper right after the cards grid) -> yellow button */
+.cards-adventure-wrapper + .default-content-wrapper a:any-link {
+  display: inline-block;
+  padding: 12px 28px;
+  background-color: #ffea00;
+  color: #202020;
+  font-weight: 600;
+  font-size: 13px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
 .cards-adventure > ul {
   list-style: none;
   margin: 0;
@@ -33,6 +53,7 @@
   text-transform: uppercase;
 }
 
+/* stylelint-disable-next-line no-descending-specificity */
 .cards-adventure .cards-adventure-card-body h3 a {
   color: #202020;
   text-decoration: none;
