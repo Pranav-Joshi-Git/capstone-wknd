@@ -31,7 +31,8 @@
 /* white content card, centered over image bottom, ~80% width */
 .hero-adventure .hero-adventure-content {
   z-index: 1;
-  width: 80%;
+  width: 100%;
+  max-width: 960px;
   box-sizing: border-box;
   padding: 28px 40px;
   background-color: #fff;
