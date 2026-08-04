@@ -1,12 +1,3 @@
-/* contract the "Where do you want to go?" group to match the hero card width */
-.default-content-wrapper:has(+ .cards-adventure-wrapper),
-.cards-adventure-wrapper,
-.cards-adventure-wrapper + .default-content-wrapper {
-  width: 100%;
-  max-width: 960px;
-  margin-inline: auto;
-}
-
 /* "All Trips" link (default-content wrapper right after the cards grid) -> yellow button */
 .cards-adventure-wrapper + .default-content-wrapper a:any-link {
   display: inline-block;
