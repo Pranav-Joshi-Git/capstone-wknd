@@ -32,9 +32,15 @@ header nav[aria-expanded='true'] {
 }
 
 @media (width >= 900px) {
-  header .nav-wrapper {
+  /* make the header itself sticky so it stays visible on scroll */
+  header {
     position: sticky;
     top: 0;
+    z-index: 3;
+  }
+
+  header .nav-wrapper {
+    position: relative;
   }
 
   header nav {
