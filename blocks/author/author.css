@@ -10,8 +10,8 @@
 }
 
 .author .author-avatar {
-  width: 165px;
-  height: 165px;
+  width: 164px;
+  height: 164px;
   border-radius: 50%;
   overflow: hidden;
   margin: 0 auto;
@@ -27,22 +27,85 @@
 
 .author .author-name {
   margin: 8px 0 0;
-  font-size: var(--heading-font-size-m, 1.5rem);
+  font-family: var(--heading-font-family);
+  font-size: 24px;
+  font-weight: 400;
   line-height: 1.2;
+  text-transform: none;
+  color: #202020;
 }
 
 .author .author-title {
   margin: 0;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
-  font-size: var(--body-font-size-xs, 0.75rem);
+  letter-spacing: normal;
+  font-size: 14px;
   font-weight: 600;
-  color: inherit;
+  color: #202020;
+}
+
+/* social row inside the card: dark square icons */
+.author .author-card .social-links {
+  margin-top: 8px;
+  background: transparent;
+  padding: 0;
+}
+
+.author .author-card .social-links .social-links-list {
+  justify-content: center;
+  gap: 8px;
+}
+
+.author .author-card .social-links a.social-links-icon:any-link {
+  width: 40px;
+  height: 40px;
+  background-color: #202020;
+  color: #ebebeb;
+  border-radius: 0;
+}
+
+.author .author-card .social-links .social-links-icon svg {
+  fill: #ebebeb;
+}
+
+/* group headings (Our Contributors / WKND Guides): yellow underline */
+.section:has(.author) .default-content-wrapper h2 {
+  margin-bottom: 8px;
+}
+
+.section:has(.author) .default-content-wrapper h2::after {
+  content: '';
+  display: block;
+  width: 84px;
+  padding-top: 8px;
+  border-bottom: 2px solid #ffea00;
+}
+
+/* contributor cards grid: constrained to section width, aligned with headings */
+.section .authors-grid {
+  max-width: 1200px;
+  margin: 24px auto;
+  padding: 0 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+
+.section .authors-grid .author-wrapper {
+  flex: 0 1 250px;
+  margin: 0;
+  text-align: center;
+}
+
+@media (width >= 900px) {
+  .section .authors-grid {
+    padding: 0 32px;
+  }
 }
 
 @media (width >= 900px) {
   .author .author-avatar {
-    width: 185px;
-    height: 185px;
+    width: 164px;
+    height: 164px;
   }
 }
