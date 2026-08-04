@@ -22,17 +22,19 @@
 /* label (first cell) */
 .columns-facts > div > div:first-child {
   order: 0;
-  font-size: var(--body-font-size-xs);
+  font-size: 12px;
   font-weight: 400;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: var(--text-muted-color, #6a6a6a);
+  color: #696969;
 }
 
 /* value (second cell) */
 .columns-facts > div > div:last-child {
   order: 1;
-  font-weight: 700;
+  font-size: 14px;
+  font-weight: 600;
+  color: #202020;
 }
 
 .columns-facts > div > div p {

@@ -146,3 +146,32 @@ body.magazine-article .author .author-card .social-links {
   grid-row: 1 / span 2;
 }
 
+
+/* ===== Adventure detail page (body.adventure-detail) ===== */
+
+/* full-bleed hero carousel + title span the section; facts + tabs form 2 columns */
+@media (width >= 900px) {
+  body.adventure-detail main > .section > div {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    column-gap: 48px;
+    align-items: start;
+    max-width: 1200px;
+  }
+
+  /* carousel-hero and h1 span the full width (top rows) */
+  body.adventure-detail main > .section > div > .carousel-hero-wrapper,
+  body.adventure-detail main > .section > div > .default-content-wrapper {
+    grid-column: 1 / -1;
+  }
+
+  /* facts -> left sidebar */
+  body.adventure-detail main > .section > div > .columns-facts-wrapper {
+    grid-column: 1;
+  }
+
+  /* tabbed body -> right column */
+  body.adventure-detail main > .section > div > .tabs-detail-wrapper {
+    grid-column: 2;
+  }
+}
