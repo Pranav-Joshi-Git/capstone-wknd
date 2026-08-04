@@ -1,58 +1,72 @@
 .tabs-detail .tabs-detail-list {
   display: flex;
-  gap: 0.5ch;
+  flex-wrap: wrap;
+  gap: 8px 12px;
   max-width: 100%;
-  font-size: var(--body-font-size-xs);
-  overflow-x: auto;
-}
-
-@media (width >= 600px) {
-  .tabs-detail .tabs-detail-list {
-    font-size: var(--body-font-size-s);
-  }
-}
-
-@media (width >= 900px) {
-  .tabs-detail .tabs-detail-list {
-    font-size: var(--body-font-size-m);
-  }
+  margin: 0 0 24px;
+  border-bottom: 1px solid #dadada;
 }
 
 .tabs-detail .tabs-detail-list button {
-  flex: 0 0 max-content;
+  flex: 0 0 auto;
   margin: 0;
-  border: 1px solid #dadada;
+  border: 0;
+  border-bottom: 2px solid transparent;
   border-radius: 0;
-  padding: 0.5em;
-  background-color: var(--light-color);
-  color: initial;
-  font-weight: bold;
-  line-height: unset;
-  text-align: initial;
-  text-overflow: unset;
-  overflow: unset;
-  white-space: unset;
-  transition: background-color 0.2s;
+  padding: 12px 16px;
+  background-color: transparent;
+  color: #6a6a6a;
+  font-family: var(--body-font-family);
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  line-height: 1.2;
+  cursor: pointer;
+  transition: color 0.2s, border-color 0.2s;
 }
 
 .tabs-detail .tabs-detail-list button p {
   margin: 0;
 }
 
+.tabs-detail .tabs-detail-list button:hover {
+  color: #202020;
+}
 
+/* active tab: dark text + yellow underline */
 .tabs-detail .tabs-detail-list button[aria-selected='true'] {
-  border-bottom: 1px solid var(--background-color);
-  background-color: var(--background-color);
-  cursor: initial;
+  color: #202020;
+  border-bottom-color: #ffea00;
+  cursor: default;
 }
 
 .tabs-detail .tabs-detail-panel {
-  margin-top: -1px;
-  padding: 24px;
-  border: 1px solid #dadada;
-  overflow: auto;
+  padding: 0;
+  overflow: visible;
 }
 
 .tabs-detail .tabs-detail-panel[aria-hidden='true'] {
   display: none;
+}
+
+/* body content inside the panel */
+.tabs-detail .tabs-detail-panel h2 {
+  font-family: var(--heading-font-family);
+  font-weight: 400;
+  font-size: 28px;
+  margin: 0 0 16px;
+}
+
+/* stylelint-disable-next-line no-descending-specificity */
+.tabs-detail .tabs-detail-panel p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #202020;
+}
+
+.tabs-detail .tabs-detail-panel img {
+  width: 100%;
+  height: auto;
+  margin: 16px 0;
 }
