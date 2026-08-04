@@ -7,6 +7,16 @@ body.magazine-article main > .section > div {
   max-width: 800px;
 }
 
+/* hero image: first section, full content width, no extra spacing */
+body.magazine-article main > .section:first-child {
+  margin-top: 0;
+}
+
+body.magazine-article main > .section:first-child img {
+  width: 100%;
+  display: block;
+}
+
 /* article title */
 body.magazine-article main h1 {
   font-family: var(--heading-font-family);
