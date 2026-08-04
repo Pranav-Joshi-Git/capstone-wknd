@@ -1,8 +1,9 @@
-/* contract the "Where do you want to go?" group to 80% (matches the hero card width) */
+/* contract the "Where do you want to go?" group to match the hero card width */
 .default-content-wrapper:has(+ .cards-adventure-wrapper),
 .cards-adventure-wrapper,
 .cards-adventure-wrapper + .default-content-wrapper {
-  width: 80%;
+  width: 100%;
+  max-width: 960px;
   margin-inline: auto;
 }
 
