@@ -157,8 +157,9 @@ body.magazine-article .author .author-card .social-links {
   body.adventure-detail main > .section.tabs-detail-container {
     display: grid;
     grid-template-columns: 300px 1fr;
-    grid-template-rows: auto auto 1fr;
+    grid-template-rows: auto auto auto;
     column-gap: 48px;
+    align-content: start;
     align-items: start;
   }
 
@@ -166,6 +167,7 @@ body.magazine-article .author .author-card .social-links {
   body.adventure-detail main > .section.tabs-detail-container > .default-content-wrapper:has(+ .columns-facts-wrapper) {
     grid-column: 1 / -1;
     grid-row: 1;
+    text-align: left;
   }
 
   /* facts -> left column, row 2 */
@@ -174,16 +176,16 @@ body.magazine-article .author .author-card .social-links {
     grid-row: 2;
   }
 
-  /* "Share this Adventure" -> left column, row 3 (right below facts) */
+  /* "Share this Adventure" -> left column, row 3 (directly below facts) */
   body.adventure-detail main > .section.tabs-detail-container > .columns-facts-wrapper + .default-content-wrapper {
     grid-column: 1;
     grid-row: 3;
   }
 
-  /* tabbed body -> right column, spanning facts + share rows */
+  /* tabbed body -> right column, spans facts + share rows (row 2 to end) */
   body.adventure-detail main > .section.tabs-detail-container > .tabs-detail-wrapper {
     grid-column: 2;
-    grid-row: 2 / -1;
+    grid-row: 2 / 4;
   }
 }
 
