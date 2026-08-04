@@ -47,12 +47,31 @@ export default async function decorate(block) {
 
   block.prepend(tablist);
 
-  // decorate + load the nested cards-adventure blocks inside each tab panel
-  // (nested blocks aren't auto-decorated by the EDS pipeline)
+  // Nested block tables inside tab panels are NOT auto-converted by the EDS
+  // pipeline (that only happens for section-level blocks). Convert each nested
+  // <table> into a cards-adventure block div, then decorate + load it.
   await Promise.all(
-    [...block.querySelectorAll('.cards-adventure')].map(async (nested) => {
-      decorateBlock(nested);
-      await loadBlock(nested);
+    [...block.querySelectorAll('.tabs-adventure-panel table')].map(async (table) => {
+      const rows = [...table.querySelectorAll('tbody > tr, thead > tr')];
+      // first row is the block-name label ("Cards Adventure") — drop it
+      const [, ...contentRows] = rows;
+
+      const cardsBlock = document.createElement('div');
+      cardsBlock.className = 'cards-adventure';
+
+      contentRows.forEach((tr) => {
+        const rowDiv = document.createElement('div');
+        [...tr.children].forEach((td) => {
+          const cellDiv = document.createElement('div');
+          while (td.firstChild) cellDiv.append(td.firstChild);
+          rowDiv.append(cellDiv);
+        });
+        cardsBlock.append(rowDiv);
+      });
+
+      table.replaceWith(cardsBlock);
+      decorateBlock(cardsBlock);
+      await loadBlock(cardsBlock);
     }),
   );
 }
