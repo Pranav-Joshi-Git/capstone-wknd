@@ -53,4 +53,30 @@ export default async function decorate(block) {
 
   block.textContent = '';
   block.append(card);
+
+  // Pull the adjacent social-links block into this card so each contributor
+  // renders as one unit (avatar, name, title, social row).
+  const wrapper = block.closest('.author-wrapper') || block.parentElement;
+  const nextWrapper = wrapper && wrapper.nextElementSibling;
+  const social = nextWrapper && nextWrapper.querySelector('.social-links');
+  if (social) {
+    card.append(social);
+    nextWrapper.remove();
+  }
+
+  // Group consecutive contributor cards into a single constrained grid so the
+  // row aligns with the section headings (which sit in a centered 1200px box).
+  // The first author in a run creates the grid; later ones join the prior grid.
+  if (wrapper) {
+    const prev = wrapper.previousElementSibling;
+    let grid;
+    if (prev && prev.classList.contains('authors-grid')) {
+      grid = prev;
+    } else {
+      grid = document.createElement('div');
+      grid.className = 'authors-grid';
+      wrapper.replaceWith(grid);
+    }
+    grid.append(wrapper);
+  }
 }
