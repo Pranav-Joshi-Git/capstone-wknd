@@ -29,34 +29,63 @@
   justify-content: flex-end;
   position: relative;
   width: 100%;
-  min-height: min(46vw, 640px);
 }
 
-.carousel-hero .carousel-hero-slide .carousel-hero-slide-image picture {
-  position: absolute;
-  inset: 0;
+/* mobile: image is in normal flow, card sits below it (full width) */
+.carousel-hero .carousel-hero-slide .carousel-hero-slide-image {
+  width: 100%;
+  line-height: 0;
 }
 
-.carousel-hero .carousel-hero-slide .carousel-hero-slide-image picture > img {
-  height: 100%;
+/* stylelint-disable-next-line no-descending-specificity */
+.carousel-hero .carousel-hero-slide .carousel-hero-slide-image p {
+  margin: 0;
+}
+
+.carousel-hero .carousel-hero-slide .carousel-hero-slide-image img {
+  height: min(60vw, 640px);
   width: 100%;
   object-fit: cover;
+  display: block;
 }
 
 .carousel-hero .carousel-hero-slide .carousel-hero-slide-content {
   z-index: 1;
   margin: 0;
-  padding: 28px 40px;
+  padding: 24px;
   color: #202020;
   background-color: #fff;
   position: relative;
-  width: min(80%, 900px);
-  height: 180px;
+  width: 100%;
+  min-height: 180px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 8px;
+}
+
+/* desktop: overlay the card centered at the image bottom */
+@media (width >= 900px) {
+  .carousel-hero .carousel-hero-slide {
+    min-height: min(46vw, 640px);
+  }
+
+  .carousel-hero .carousel-hero-slide .carousel-hero-slide-image {
+    position: absolute;
+    inset: 0;
+  }
+
+  .carousel-hero .carousel-hero-slide .carousel-hero-slide-image img {
+    height: 100%;
+  }
+
+  .carousel-hero .carousel-hero-slide .carousel-hero-slide-content {
+    width: min(80%, 900px);
+    height: 180px;
+    min-height: 0;
+    padding: 28px 40px;
+  }
 }
 
 /* hide the white card when the slide has no text content (image-only slides) */
@@ -72,6 +101,7 @@
   margin: 0;
 }
 
+/* stylelint-disable-next-line no-descending-specificity */
 .carousel-hero .carousel-hero-slide-content p {
   margin: 0;
 }
