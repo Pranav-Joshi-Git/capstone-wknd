@@ -1,8 +1,9 @@
 import { createOptimizedPicture, readBlockConfig } from '../../scripts/aem.js';
 
 const DEFAULTS = {
-  // path prefix that identifies magazine articles in the query index
-  source: '/us/en/magazine/',
+  // path prefix(es) that identify magazine articles in the query index.
+  // Accepts a comma-separated list so multiple folders can be included.
+  source: '/us/en/magazine/, /us/en/new-magazine/',
   // query index feed
   index: '/query-index.json',
   // max number of articles to show (0 = all)
@@ -76,8 +77,11 @@ export default async function decorate(block) {
 
   block.textContent = '';
 
+  // source may list several path prefixes, comma-separated
+  const prefixes = cfg.source.split(',').map((s) => s.trim()).filter(Boolean);
+
   const articles = (await fetchArticles(cfg.index))
-    .filter((a) => a.path && a.path.startsWith(cfg.source))
+    .filter((a) => a.path && prefixes.some((p) => a.path.startsWith(p)))
     .slice(0, limit > 0 ? limit : undefined);
 
   const ul = document.createElement('ul');
