@@ -96,6 +96,7 @@
   letter-spacing: 0.03em;
   text-decoration: none;
   border-radius: 0;
+  pointer-events: none;
 }
 
 .members-only .members-only-cta a.button:hover {

@@ -284,11 +284,11 @@ header nav .nav-tools {
 /* WKND wordmark brand */
 header .nav-brand a:any-link {
   font-weight: 700;
-  font-size: 42px;
-  letter-spacing: 0.12em;
+  font-size: 3.5rem;
   text-transform: uppercase;
   color: #202020;
   text-decoration: none;
+  margin-left: 2rem;
 }
 
 /* nav links: uppercase */
@@ -308,6 +308,7 @@ header nav .nav-sections .default-content-wrapper > ul > li {
 
   header nav .nav-tools {
     margin-left: 32px;
+    margin-right: 1rem;
   }
 }
 
