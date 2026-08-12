@@ -156,8 +156,8 @@
 /* nav arrows: below the image, bottom-right (in the indicators row) */
 .carousel-hero .carousel-hero-navigation-buttons {
   position: absolute;
-  bottom: 8px;
-  right: 24px;
+  bottom: 0;
+  right: -0.5rem;
   left: auto;
   width: auto;
   display: flex;
