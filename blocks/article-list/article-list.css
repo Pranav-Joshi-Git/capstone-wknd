@@ -10,13 +10,56 @@
   text-decoration: none;
 }
 
-.article-list > ul {
+.article-list > ul,
+.article-list .article-list-panel > ul {
   list-style: none;
   margin: 0;
   padding: 0;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(257px, 1fr));
   gap: 24px;
+}
+
+/* --- tabbed variant (facet grouping, e.g. adventures by activity) --- */
+.article-list .article-list-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+  max-width: 100%;
+  margin: 32px 0;
+}
+
+.article-list .article-list-tabs button {
+  flex: 0 0 auto;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  padding: 12px 22px;
+  background-color: transparent;
+  color: #202020;
+  font-family: var(--body-font-family);
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  line-height: 1.2;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.article-list .article-list-tabs button:hover {
+  background-color: #ebebeb;
+}
+
+/* active tab: black background, white text (matches adventures) */
+.article-list .article-list-tabs button[aria-selected='true'] {
+  background-color: #202020;
+  color: #fff;
+  cursor: default;
+}
+
+.article-list .article-list-panel[aria-hidden='true'] {
+  display: none;
 }
 
 /* yellow underline on section headings (All Articles / Members Only) */
