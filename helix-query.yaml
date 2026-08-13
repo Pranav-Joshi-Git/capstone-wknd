@@ -23,6 +23,11 @@ indices:
       publishDate:
         select: head > meta[name="publication-date"]
         value: attribute(el, 'content')
+      activity:
+        # first fact row of the adventure detail's columns-facts block is
+        # "Activity"; index its value cell so article-list can group by it
+        select: div.columns-facts > div:first-of-type > div:nth-of-type(2)
+        value: textContent(el)
       lastModified:
         select: none
         value: parseTimestamp(headers["last-modified"], 'ddd, DD MMM YYYY hh:mm:ss GMT')
