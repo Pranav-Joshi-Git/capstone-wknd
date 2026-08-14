@@ -15,6 +15,8 @@ const DEFAULTS = {
   // is treated as the "show everything" tab. When empty, tabs are derived
   // from the distinct facet values found in the data.
   tabs: '',
+  // heading shown above the compact ("related") variant list
+  heading: 'Share this Story',
 };
 
 // maps raw index facet values to display/tab buckets. Raw adventure "Activity"
@@ -40,6 +42,26 @@ function bucketFor(raw) {
   if (!raw) return '';
   const key = raw.trim().toLowerCase();
   return FACET_ALIASES[key] || raw.trim();
+}
+
+/**
+ * Format a publish date (YYYY-MM-DD or epoch) as "Weekday, D Mon YYYY".
+ * @param {string|number} value raw date value from the index
+ * @returns {string} formatted date, or '' when unparseable
+ */
+function formatDate(value) {
+  if (!value) return '';
+  let date;
+  if (/^\d+$/.test(String(value))) {
+    const n = Number(value);
+    date = new Date(n < 1e12 ? n * 1000 : n);
+  } else {
+    date = new Date(value);
+  }
+  if (Number.isNaN(date.getTime())) return '';
+  return date.toLocaleDateString('en-US', {
+    weekday: 'long', day: 'numeric', month: 'short', year: 'numeric',
+  });
 }
 
 /**
@@ -120,6 +142,56 @@ function renderFlat(block, articles) {
 }
 
 /**
+ * Render a compact link list (title + date), used as a "related stories"
+ * sidebar. Shows a heading and excludes the current page.
+ * @param {Element} block the block element
+ * @param {Array} articles filtered index entries
+ * @param {string} heading heading text (from the `heading` config)
+ * @param {number} limit max items to show (0 = all), applied after excluding
+ *   the current page
+ */
+function renderCompact(block, articles, heading, limit) {
+  const currentPath = window.location.pathname.replace(/\.html$/, '');
+
+  if (heading) {
+    const h = document.createElement('h5');
+    h.className = 'article-list-heading';
+    h.textContent = heading;
+    block.append(h);
+  }
+
+  const ul = document.createElement('ul');
+  ul.className = 'article-list-compact-list';
+
+  articles
+    .filter((a) => a.path.replace(/\.html$/, '') !== currentPath)
+    .slice(0, limit > 0 ? limit : undefined)
+    .forEach((article) => {
+      const li = document.createElement('li');
+      const link = document.createElement('a');
+      link.href = article.path;
+
+      const title = document.createElement('span');
+      title.className = 'article-list-compact-title';
+      title.textContent = article.title || article.path;
+      link.append(title);
+
+      const date = formatDate(article.publishDate);
+      if (date) {
+        const dateEl = document.createElement('span');
+        dateEl.className = 'article-list-compact-date';
+        dateEl.textContent = date;
+        link.append(dateEl);
+      }
+
+      li.append(link);
+      ul.append(li);
+    });
+
+  block.append(ul);
+}
+
+/**
  * Render a tabbed card list grouped by a facet.
  * @param {Element} block the block element
  * @param {Array} articles filtered index entries
@@ -193,16 +265,23 @@ export default async function decorate(block) {
   const cfg = { ...DEFAULTS, ...readBlockConfig(block) };
   const limit = parseInt(cfg.limit, 10) || 0;
 
+  const compact = block.classList.contains('compact');
+
   block.textContent = '';
 
   // source may list several path prefixes, comma-separated
   const prefixes = cfg.source.split(',').map((s) => s.trim()).filter(Boolean);
 
-  const articles = (await fetchArticles(cfg.index))
-    .filter((a) => a.path && prefixes.some((p) => a.path.startsWith(p)))
-    .slice(0, limit > 0 ? limit : undefined);
+  let articles = (await fetchArticles(cfg.index))
+    .filter((a) => a.path && prefixes.some((p) => a.path.startsWith(p)));
 
-  if (cfg.facet) {
+  // non-compact variants limit the raw set; the compact variant limits after
+  // excluding the current page (done inside renderCompact)
+  if (!compact && limit > 0) articles = articles.slice(0, limit);
+
+  if (compact) {
+    renderCompact(block, articles, cfg.heading, limit);
+  } else if (cfg.facet) {
     const tabLabels = cfg.tabs.split(',').map((s) => s.trim()).filter(Boolean);
     renderTabbed(block, articles, cfg.facet, tabLabels);
   } else {
