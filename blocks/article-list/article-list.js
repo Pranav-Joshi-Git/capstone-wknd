@@ -197,14 +197,26 @@ function renderCompact(block, articles, heading, limit) {
  * @param {Array} articles filtered index entries
  * @param {string} facet index field to group by
  * @param {string[]} tabLabels ordered tab labels (first = "all")
+ * @param {number} limit max cards PER category tab (0 = all); the "All" tab
+ *   shows the union of every category tab's (limited) cards
  */
-function renderTabbed(block, articles, facet, tabLabels) {
+function renderTabbed(block, articles, facet, tabLabels, limit) {
   // derive tab labels from data when none were configured
   let labels = tabLabels;
   if (!labels.length) {
     const found = [...new Set(articles.map((a) => bucketFor(a[facet])).filter(Boolean))].sort();
     labels = ['All', ...found];
   }
+
+  // limit applies per category tab (not globally); "All" is their union
+  const perCategory = new Map();
+  labels.slice(1).forEach((label) => {
+    const matches = articles.filter((a) => bucketFor(a[facet]) === label);
+    perCategory.set(label, limit > 0 ? matches.slice(0, limit) : matches);
+  });
+  const selected = new Set();
+  perCategory.forEach((list) => list.forEach((a) => selected.add(a)));
+  const allItems = articles.filter((a) => selected.has(a));
 
   const tablist = document.createElement('div');
   tablist.className = 'article-list-tabs';
@@ -215,9 +227,7 @@ function renderTabbed(block, articles, facet, tabLabels) {
 
   labels.forEach((label, i) => {
     const id = toClassName(label);
-    const matches = i === 0
-      ? articles
-      : articles.filter((a) => bucketFor(a[facet]) === label);
+    const matches = i === 0 ? allItems : perCategory.get(label);
 
     // panel
     const panel = document.createElement('div');
@@ -277,15 +287,15 @@ export default async function decorate(block) {
   let articles = (await fetchArticles(cfg.index))
     .filter((a) => a.path && prefixes.some((p) => a.path.startsWith(p)));
 
-  // non-compact variants limit the raw set; the compact variant limits after
-  // excluding the current page (done inside renderCompact)
-  if (!compact && limit > 0) articles = articles.slice(0, limit);
+  // the flat variant caps the whole grid here; compact limits after excluding
+  // the current page (in renderCompact); tabbed limits PER tab (in renderTabbed)
+  if (!compact && !tabbed && limit > 0) articles = articles.slice(0, limit);
 
   if (compact) {
     renderCompact(block, articles, cfg.heading, limit);
   } else if (tabbed) {
     const tabLabels = cfg.tabs.split(',').map((s) => s.trim()).filter(Boolean);
-    renderTabbed(block, articles, cfg.facet, tabLabels);
+    renderTabbed(block, articles, cfg.facet, tabLabels, limit);
   } else {
     renderFlat(block, articles);
   }
