@@ -266,6 +266,8 @@ export default async function decorate(block) {
   const limit = parseInt(cfg.limit, 10) || 0;
 
   const compact = block.classList.contains('compact');
+  // tabbed variant: explicit `tabbed` class, or (back-compat) a facet configured
+  const tabbed = block.classList.contains('tabbed') || !!cfg.facet;
 
   block.textContent = '';
 
@@ -281,7 +283,7 @@ export default async function decorate(block) {
 
   if (compact) {
     renderCompact(block, articles, cfg.heading, limit);
-  } else if (cfg.facet) {
+  } else if (tabbed) {
     const tabLabels = cfg.tabs.split(',').map((s) => s.trim()).filter(Boolean);
     renderTabbed(block, articles, cfg.facet, tabLabels);
   } else {
