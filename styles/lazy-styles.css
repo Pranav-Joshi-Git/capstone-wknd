@@ -64,11 +64,12 @@ body.magazine-article main blockquote {
   color: #202020;
 }
 
-/* two-column layout: article body (section 1) left, related-articles sidebar right.
-   Section 1 contains the body default-content + the related-articles block. */
+/* two-column layout: article body (section 1) left, related sidebar right.
+   The sidebar is an article-list "compact" variant; anchor on the article
+   page + that variant so the cards article-list (home/adventures) is unaffected. */
 @media (width >= 900px) {
   /* the SECTION is the grid; its wrappers are the two columns */
-  body.magazine-article main > .section.related-articles-container {
+  body.magazine-article main > .section:has(.article-list.compact) {
     display: grid;
     grid-template-columns: minmax(0, 1fr) 260px;
     column-gap: 56px;
@@ -79,19 +80,19 @@ body.magazine-article main blockquote {
   }
 
   /* wrappers shouldn't re-apply section max-width/padding */
-  body.magazine-article main > .section.related-articles-container > div {
+  body.magazine-article main > .section:has(.article-list.compact) > div {
     max-width: none;
     padding: 0;
     margin: 0;
   }
 
   /* body content -> left column */
-  body.magazine-article main > .section.related-articles-container > .default-content-wrapper {
+  body.magazine-article main > .section:has(.article-list.compact) > .default-content-wrapper {
     grid-column: 1;
   }
 
-  /* related-articles sidebar -> right column, sticky */
-  body.magazine-article main > .section.related-articles-container > .related-articles-wrapper {
+  /* related sidebar -> right column, sticky */
+  body.magazine-article main > .section:has(.article-list.compact) > .article-list-wrapper {
     grid-column: 2;
     position: sticky;
     top: 24px;
