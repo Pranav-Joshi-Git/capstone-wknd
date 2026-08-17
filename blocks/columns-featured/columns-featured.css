@@ -1,5 +1,5 @@
 .columns-featured {
-  background-color: #ebebeb;
+  background-color: var(--color-border-1);
   margin-top: 4rem;
 }
 
@@ -21,7 +21,7 @@
 .columns-featured .columns-featured-text p {
   font-size: 15px;
   line-height: 1.6;
-  color: #202020;
+  color: var(--brand-ink);
 }
 
 .columns-featured .columns-featured-text > p:first-child {
@@ -41,8 +41,8 @@
   display: inline-block;
   margin-top: 16px;
   padding: 14px 28px;
-  background-color: #ffea00;
-  color: #202020;
+  background-color: var(--brand-accent);
+  color: var(--brand-ink);
   font-weight: 600;
   font-size: 14px;
   text-transform: uppercase;
@@ -51,7 +51,7 @@
 }
 
 .columns-featured .columns-featured-text a:hover {
-  background-color: #ffd400;
+  background-color: var(--brand-accent-hover);
 }
 
 @media (width >= 900px) {

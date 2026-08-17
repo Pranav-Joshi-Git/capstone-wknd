@@ -53,8 +53,8 @@
   z-index: 1;
   margin: 0;
   padding: 24px;
-  color: #202020;
-  background-color: #fff;
+  color: var(--brand-ink);
+  background-color: var(--color-white);
   position: relative;
   width: 100%;
   min-height: 180px;
@@ -110,8 +110,8 @@
   display: inline-block;
   margin: 0;
   padding: 12px 28px;
-  background-color: #ffea00;
-  color: #202020;
+  background-color: var(--brand-accent);
+  color: var(--brand-ink);
   font-weight: 600;
   font-size: 13px;
   text-transform: uppercase;
@@ -142,7 +142,7 @@
   padding: 8px;
   border: 0;
   border-radius: 50%;
-  background-color: #cfcfcf;
+  background-color: var(--color-grey-4);
   background-clip: content-box;
   transition: background-color 0.2s;
 }
@@ -176,7 +176,7 @@
   border-radius: 0;
   padding: 0;
   background-color: transparent;
-  color: #202020;
+  color: var(--brand-ink);
   transition: opacity 0.2s;
 }
 
@@ -189,7 +189,7 @@
 .carousel-hero .carousel-hero-navigation-buttons button::after {
   display: block;
   content: '';
-  border: 2px solid #202020;
+  border: 2px solid var(--brand-ink);
   border-bottom: 0;
   border-left: 0;
   height: 12px;

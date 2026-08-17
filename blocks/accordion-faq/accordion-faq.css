@@ -1,5 +1,5 @@
 .accordion-faq details {
-  border-bottom: 2px solid #ebebeb;
+  border-bottom: 2px solid var(--color-border-1);
 }
 
 .accordion-faq details summary {
@@ -10,13 +10,13 @@
   font-size: 16px;
   font-weight: 600;
   text-transform: uppercase;
-  color: #000;
+  color: var(--color-black);
   transition: color 0.2s;
 }
 
 .accordion-faq details summary:focus,
 .accordion-faq details summary:hover {
-  color: #000;
+  color: var(--color-black);
 }
 
 .accordion-faq details summary::-webkit-details-marker {
@@ -30,7 +30,7 @@
   position: absolute;
   top: 50%;
   right: 8px;
-  background-color: #202020;
+  background-color: var(--brand-ink);
   transition: transform 0.2s, opacity 0.2s;
 }
 
@@ -55,7 +55,7 @@
 .accordion-faq details .accordion-faq-item-body {
   padding: 0 24px 16px;
   font-size: 14px;
-  color: #202020;
+  color: var(--brand-ink);
 }
 
 .accordion-faq details .accordion-faq-item-body p {
@@ -116,5 +116,5 @@
   display: block;
   width: 84px;
   padding-top: 8px;
-  border-bottom: 2px solid #ffea00;
+  border-bottom: 2px solid var(--brand-accent);
 }

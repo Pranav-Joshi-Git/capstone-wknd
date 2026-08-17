@@ -2,8 +2,8 @@
 .cards-adventure-wrapper + .default-content-wrapper a:any-link {
   display: inline-block;
   padding: 12px 28px;
-  background-color: #ffea00;
-  color: #202020;
+  background-color: var(--brand-accent);
+  color: var(--brand-ink);
   font-weight: 600;
   font-size: 13px;
   text-transform: uppercase;
@@ -47,7 +47,7 @@
 
 /* stylelint-disable-next-line no-descending-specificity */
 .cards-adventure .cards-adventure-card-body h3 a {
-  color: #202020;
+  color: var(--brand-ink);
   text-decoration: none;
 }
 
@@ -59,7 +59,7 @@
   margin: 0;
   font-size: 14px;
   line-height: 1.5;
-  color: #202020;
+  color: var(--brand-ink);
   display: -webkit-box;
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;

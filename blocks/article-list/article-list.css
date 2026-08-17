@@ -2,8 +2,8 @@
 .article-list-wrapper + .default-content-wrapper a:any-link {
   display: inline-block;
   padding: 12px 28px;
-  background-color: #ffea00;
-  color: #202020;
+  background-color: var(--brand-accent);
+  color: var(--brand-ink);
   font-weight: 600;
   font-size: 13px;
   text-transform: uppercase;
@@ -36,7 +36,7 @@
   border-radius: 0;
   padding: 12px 22px;
   background-color: transparent;
-  color: #202020;
+  color: var(--brand-ink);
   font-family: var(--body-font-family);
   font-size: 14px;
   font-weight: 400;
@@ -48,13 +48,13 @@
 }
 
 .article-list .article-list-tabs button:hover {
-  background-color: #ebebeb;
+  background-color: var(--color-border-1);
 }
 
 /* active tab: black background, white text (matches adventures) */
 .article-list .article-list-tabs button[aria-selected='true'] {
-  background-color: #202020;
-  color: #fff;
+  background-color: var(--brand-ink);
+  color: var(--color-white);
   cursor: default;
 }
 
@@ -72,7 +72,7 @@
   display: block;
   width: 84px;
   padding-top: 8px;
-  border-bottom: 2px solid #ffea00;
+  border-bottom: 2px solid var(--brand-accent);
 }
 
 .article-list > ul > li {
@@ -104,7 +104,7 @@
 
 /* stylelint-disable-next-line no-descending-specificity */
 .article-list .article-list-card-body h3 a {
-  color: #202020;
+  color: var(--brand-ink);
   text-decoration: none;
 }
 
@@ -116,7 +116,7 @@
   margin: 0;
   font-size: 14px;
   line-height: 1.5;
-  color: #202020;
+  color: var(--brand-ink);
 
   /* single-line truncation with ellipsis (matches live site) */
   display: -webkit-box;
@@ -133,7 +133,7 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: #202020;
+  color: var(--brand-ink);
 }
 
 .article-list.compact .article-list-compact-list {
@@ -143,14 +143,14 @@
 }
 
 .article-list.compact .article-list-compact-list li {
-  border-bottom: 1px solid #ebebeb;
+  border-bottom: 1px solid var(--color-border-1);
 }
 
 .article-list.compact .article-list-compact-list li a {
   display: block;
   padding: 16px 12px;
   text-decoration: none;
-  color: #202020;
+  color: var(--brand-ink);
 }
 
 .article-list.compact .article-list-compact-title {
@@ -167,9 +167,9 @@
   font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: #6a6a6a;
+  color: var(--color-grey-2);
 }
 
 .article-list.compact .article-list-compact-list li:hover {
-  background: #ffea00;
+  background: var(--brand-accent);
 }
