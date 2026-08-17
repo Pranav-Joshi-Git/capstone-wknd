@@ -19,6 +19,28 @@
   --link-color: #3b63fb;
   --link-hover-color: #1d3ecf;
 
+  /* brand palette (WKND) */
+  --brand-accent: #ffea00;
+  --brand-accent-hover: #ffd400;
+  --brand-ink: #202020;
+
+  /* neutral scale (exact values preserved from block styles) */
+  --color-white: #fff;
+  --color-black: #000;
+  --color-ink-2: #1d1d1d;
+  --color-grey-1: #696969;
+  --color-grey-2: #6a6a6a;
+  --color-grey-3: #999;
+  --color-grey-4: #cfcfcf;
+  --color-grey-5: #dadada;
+  --color-grey-6: #ddd;
+  --color-border-1: #ebebeb;
+  --color-border-2: #eee;
+  --color-surface-1: #f8f8f8;
+  --color-surface-2: #f7f7f7;
+  --color-surface-3: #f4f4f4;
+  --color-surface-4: #f0f0f0;
+
   /* fonts */
   --body-font-family: 'Source Sans 3', 'Source Sans Pro', 'Helvetica Neue', helvetica, arial, sans-serif;
   --heading-font-family: asar, georgia, 'Times New Roman', times, serif;

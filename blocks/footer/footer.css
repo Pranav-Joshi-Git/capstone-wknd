@@ -1,6 +1,6 @@
 footer {
-  background-color: #202020;
-  color: #ebebeb;
+  background-color: var(--brand-ink);
+  color: var(--color-border-1);
   font-size: var(--body-font-size-xs);
 }
 
@@ -16,7 +16,7 @@ footer .footer p {
 
 /* links */
 footer .footer a:any-link {
-  color: #ebebeb;
+  color: var(--color-border-1);
   text-decoration: none;
 }
 
@@ -59,18 +59,18 @@ footer .footer .section:nth-child(3) h4 {
   font-size: 16px;
   font-weight: 600;
   text-transform: uppercase;
-  color: #ebebeb;
+  color: var(--color-border-1);
 }
 
 /* legal text (section 4) */
 footer .footer .section:nth-child(4) p {
   font-size: 12px;
-  color: #f7f7f7;
+  color: var(--color-surface-2);
 }
 
 /* social-links block: one continuous light strip, dark icons always visible */
 footer .social-links {
-  background-color: #ebebeb;
+  background-color: var(--color-border-1);
   padding: 8px 12px;
 }
 
@@ -83,7 +83,7 @@ footer .social-links a.social-links-icon:any-link {
   width: 32px;
   height: 32px;
   background-color: transparent;
-  color: #000;
+  color: var(--color-black);
   text-decoration: none;
   border-radius: 0;
 }
@@ -91,7 +91,7 @@ footer .social-links a.social-links-icon:any-link {
 footer .social-links .social-links-icon svg {
   width: 24px;
   height: 24px;
-  fill: #000;
+  fill: var(--color-black);
 }
 
 /* desktop: brand | nav | follow-us in one row */

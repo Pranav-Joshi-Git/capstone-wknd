@@ -32,7 +32,7 @@
   font-weight: 400;
   line-height: 1.2;
   text-transform: none;
-  color: #202020;
+  color: var(--brand-ink);
 }
 
 .author .author-title {
@@ -41,7 +41,7 @@
   letter-spacing: normal;
   font-size: 14px;
   font-weight: 600;
-  color: #202020;
+  color: var(--brand-ink);
 }
 
 /* social row inside the card: dark square icons */
@@ -59,13 +59,13 @@
 .author .author-card .social-links a.social-links-icon:any-link {
   width: 40px;
   height: 40px;
-  background-color: #202020;
-  color: #ebebeb;
+  background-color: var(--brand-ink);
+  color: var(--color-border-1);
   border-radius: 0;
 }
 
 .author .author-card .social-links .social-links-icon svg {
-  fill: #ebebeb;
+  fill: var(--color-border-1);
 }
 
 /* group headings (Our Contributors / WKND Guides): yellow underline */
@@ -78,7 +78,7 @@
   display: block;
   width: 84px;
   padding-top: 8px;
-  border-bottom: 2px solid #ffea00;
+  border-bottom: 2px solid var(--brand-accent);
 }
 
 /* contributor cards grid: constrained to section width, aligned with headings */

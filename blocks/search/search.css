@@ -4,7 +4,7 @@
   align-items: center;
   border: 0;
   padding: 0 12px;
-  background: #f4f4f4;
+  background: var(--color-surface-3);
   max-width: 100%;
 }
 
@@ -38,7 +38,7 @@
 }
 
 .search .search-box input[type='search']::placeholder {
-  color: #999;
+  color: var(--color-grey-3);
   text-transform: uppercase;
 }
 
@@ -50,8 +50,8 @@
   min-width: 240px;
   max-height: 320px;
   overflow-y: auto;
-  background: #fff;
-  border: 1px solid #ddd;
+  background: var(--color-white);
+  border: 1px solid var(--color-grey-6);
   border-radius: 4px;
   box-shadow: 0 4px 12px rgb(0 0 0 / 15%);
 }
@@ -77,5 +77,5 @@
 }
 
 .search .search-results li a:hover {
-  background: #f0f0f0;
+  background: var(--color-surface-4);
 }

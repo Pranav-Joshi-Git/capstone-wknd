@@ -8,7 +8,7 @@
 }
 
 .cards > ul > li {
-  border: 1px solid #dadada;
+  border: 1px solid var(--color-grey-5);
   background-color: var(--background-color);
 }
 
@@ -62,7 +62,7 @@
   font-size: 18px;
   font-weight: 600;
   text-transform: uppercase;
-  color: #202020;
+  color: var(--brand-ink);
 }
 
 /* yellow lock badge (folded-corner style) */
@@ -72,7 +72,7 @@
   top: 0;
   width: 40px;
   height: 40px;
-  background: #ffea00;
+  background: var(--brand-accent);
 
   /* folded corner: full top-left, cut bottom-right */
   clip-path: polygon(0 0, 100% 0, 0 100%);
@@ -85,7 +85,7 @@
   top: 8px;
   width: 12px;
   height: 10px;
-  border: 2px solid #202020;
+  border: 2px solid var(--brand-ink);
   border-radius: 0 0 2px 2px;
   box-sizing: border-box;
 }
@@ -97,7 +97,7 @@
   top: 3px;
   width: 6px;
   height: 8px;
-  border: 2px solid #202020;
+  border: 2px solid var(--brand-ink);
   border-bottom: 0;
   border-radius: 4px 4px 0 0;
   box-sizing: border-box;
@@ -105,7 +105,7 @@
 
 .cards.members-only .members-only-desc {
   font-size: 14px;
-  color: #202020;
+  color: var(--brand-ink);
   margin-bottom: 16px;
 }
 
@@ -117,8 +117,8 @@
 .cards.members-only .members-only-cta a.button {
   display: inline-block;
   padding: 8px 14px;
-  background: #ebebeb;
-  color: #202020;
+  background: var(--color-border-1);
+  color: var(--brand-ink);
   font-size: 12px;
   font-weight: 600;
   text-transform: uppercase;
@@ -129,7 +129,7 @@
 }
 
 .cards.members-only .members-only-cta a.button:hover {
-  background: #ddd;
+  background: var(--color-grey-6);
 }
 
 .cards.members-only .members-only-image {
