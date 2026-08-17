@@ -175,7 +175,7 @@ body.magazine-article .author .author-card .social-links {
   }
 
   /* title: row 1, right column, single line (aligns with tabs + body) */
-  body.adventure-detail main > .section.tabs-detail-container > .default-content-wrapper:has(+ .columns-facts-wrapper) {
+  body.adventure-detail main > .section.tabs-detail-container > .default-content-wrapper:has(+ .columns-wrapper) {
     grid-column: 2;
     grid-row: 1;
     white-space: nowrap;
@@ -183,14 +183,14 @@ body.magazine-article .author .author-card .social-links {
   }
 
   /* facts -> left column, row 2, pinned to top */
-  body.adventure-detail main > .section.tabs-detail-container > .columns-facts-wrapper {
+  body.adventure-detail main > .section.tabs-detail-container > .columns-wrapper {
     grid-column: 1;
     grid-row: 2;
     align-self: start;
   }
 
   /* "Share this Adventure" (if present) -> left column, row 3 */
-  body.adventure-detail main > .section.tabs-detail-container > .columns-facts-wrapper + .default-content-wrapper {
+  body.adventure-detail main > .section.tabs-detail-container > .columns-wrapper + .default-content-wrapper {
     grid-column: 1;
     grid-row: 3;
     align-self: start;
@@ -206,7 +206,7 @@ body.magazine-article .author .author-card .social-links {
 }
 
 /* "Share this Adventure" heading: uppercase, small, right below facts */
-body.adventure-detail .columns-facts-wrapper + .default-content-wrapper h5 {
+body.adventure-detail .columns-wrapper + .default-content-wrapper h5 {
   margin: 24px 0 0;
   font-family: var(--body-font-family);
   font-size: 14px;
