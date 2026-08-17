@@ -35,3 +35,108 @@
     padding: 40px 32px;
   }
 }
+
+/* ===================================================================
+   variant: adventure — full-width image with an overlaid white content
+   card (heading, text, CTA). Mobile: card flows below image; desktop:
+   card overlays centered at the image bottom.
+   =================================================================== */
+.hero.adventure {
+  padding: 0;
+  min-height: 0;
+}
+
+.hero-adventure-container .hero-wrapper {
+  padding: 0;
+}
+
+/* background image in normal flow (reserves height) — reset the base .hero
+   picture absolute/z-index so the image sits in flow for this variant */
+.hero.adventure .hero-adventure-image {
+  line-height: 0;
+}
+
+.hero.adventure .hero-adventure-image picture {
+  position: static;
+  z-index: auto;
+  inset: auto;
+}
+
+.hero.adventure .hero-adventure-image picture,
+.hero.adventure .hero-adventure-image img {
+  width: 100%;
+  height: min(60vw, 640px);
+  object-fit: cover;
+  display: block;
+}
+
+/* white content card — on mobile it flows below the image, full width */
+.hero.adventure .hero-adventure-content {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 180px;
+  padding: 24px;
+  background-color: var(--color-white);
+  color: var(--brand-ink);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+}
+
+.hero.adventure .hero-adventure-content h2,
+.hero.adventure .hero-adventure-content h3 {
+  font-family: var(--heading-font-family);
+  font-weight: 400;
+  font-size: 28px;
+  margin: 0;
+  color: var(--brand-ink);
+}
+
+.hero.adventure .hero-adventure-content p {
+  margin: 0;
+  color: var(--brand-ink);
+}
+
+.hero.adventure .hero-adventure-content a:any-link {
+  display: inline-block;
+  align-self: flex-start;
+  margin: 0;
+  padding: 12px 28px;
+  background-color: var(--brand-accent);
+  color: var(--brand-ink);
+  font-weight: 600;
+  font-size: 13px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+/* fallback when no image is authored */
+.hero.adventure.no-image {
+  min-height: 0;
+  padding: 40px 24px;
+}
+
+.hero.adventure.no-image * {
+  color: var(--text-color);
+}
+
+/* desktop: overlay the card centered at the image bottom */
+@media (width >= 900px) {
+  .hero.adventure .hero-adventure-image picture,
+  .hero.adventure .hero-adventure-image img {
+    height: min(46vw, 640px);
+  }
+
+  .hero.adventure .hero-adventure-content {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    z-index: 1;
+    width: min(80%, 900px);
+    height: 180px;
+    min-height: 0;
+    padding: 28px 40px;
+  }
+}
