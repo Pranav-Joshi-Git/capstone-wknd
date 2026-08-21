@@ -1,0 +1,169 @@
+{
+  "analysis-urls-checklist": {
+    "captured": "2026-08-03T14:01:36.656Z",
+    "totalPages": 26,
+    "statusBreakdown": {
+      "marked": 0,
+      "analyzed": 26,
+      "failed": 0
+    },
+    "pages": {
+      "https://wknd.site/us/en.html": {
+        "url": "https://wknd.site/us/en.html",
+        "status": "analyzed",
+        "analyzedAt": "2026-08-03T14:01:47.392Z",
+        "slug": "wknd_site_us_en_html--c76865e0"
+      },
+      "https://wknd.site/us/en/magazine.html": {
+        "url": "https://wknd.site/us/en/magazine.html",
+        "status": "analyzed",
+        "analyzedAt": "2026-08-03T14:01:46.876Z",
+        "slug": "wknd_site_us_en_magazine_html--17b58a0b"
+      },
+      "https://wknd.site/us/en/adventures.html": {
+        "url": "https://wknd.site/us/en/adventures.html",
+        "status": "analyzed",
+        "analyzedAt": "2026-08-03T14:01:48.243Z",
+        "slug": "wknd_site_us_en_adventures_html--6fbce216"
+      },
+      "https://wknd.site/us/en/faqs.html": {
+        "url": "https://wknd.site/us/en/faqs.html",
+        "status": "analyzed",
+        "analyzedAt": "2026-08-03T14:01:49.415Z",
+        "slug": "wknd_site_us_en_faqs_html--1afb5043"
+      },
+      "https://wknd.site/us/en/about-us.html": {
+        "url": "https://wknd.site/us/en/about-us.html",
+        "status": "analyzed",
+        "analyzedAt": "2026-08-03T14:01:51.671Z",
+        "slug": "wknd_site_us_en_about-us_html--c258e453"
+      },
+      "https://wknd.site/us/en/adventures/downhill-skiing-wyoming.html": {
+        "url": "https://wknd.site/us/en/adventures/downhill-skiing-wyoming.html",
+        "status": "analyzed",
+        "analyzedAt": "2026-08-03T14:01:56.826Z",
+        "slug": "wknd_site_us_en_adventures_downhill-skiing-wyoming_html--2bfaf893"
+      },
+      "https://wknd.site/us/en/adventures/climbing-new-zealand.html": {
+        "url": "https://wknd.site/us/en/adventures/climbing-new-zealand.html",
+        "status": "analyzed",
+        "analyzedAt": "2026-08-03T14:01:57.266Z",
+        "slug": "wknd_site_us_en_adventures_climbing-new-zealand_html--9caa0a92"
+      },
+      "https://wknd.site/us/en/adventures/yosemite-backpacking.html": {
+        "url": "https://wknd.site/us/en/adventures/yosemite-backpacking.html",
+        "status": "analyzed",
+        "analyzedAt": "2026-08-03T14:01:57.885Z",
+        "slug": "wknd_site_us_en_adventures_yosemite-backpacking_html--1f18735b"
+      },
+      "https://wknd.site/us/en/adventures/whistler-mountain-biking.html": {
+        "url": "https://wknd.site/us/en/adventures/whistler-mountain-biking.html",
+        "status": "analyzed",
+        "analyzedAt": "2026-08-03T14:01:59.498Z",
+        "slug": "wknd_site_us_en_adventures_whistler-mountain-biking_html--4a38866b"
+      },
+      "https://wknd.site/us/en/adventures/west-coast-cycling.html": {
+        "url": "https://wknd.site/us/en/adventures/west-coast-cycling.html",
+        "status": "analyzed",
+        "analyzedAt": "2026-08-03T14:02:01.209Z",
+        "slug": "wknd_site_us_en_adventures_west-coast-cycling_html--f4ac7a72"
+      },
+      "https://wknd.site/us/en/adventures/tahoe-skiing.html": {
+        "url": "https://wknd.site/us/en/adventures/tahoe-skiing.html",
+        "status": "analyzed",
+        "analyzedAt": "2026-08-03T14:02:06.309Z",
+        "slug": "wknd_site_us_en_adventures_tahoe-skiing_html--6b8fe4b0"
+      },
+      "https://wknd.site/us/en/adventures/bali-surf-camp.html": {
+        "url": "https://wknd.site/us/en/adventures/bali-surf-camp.html",
+        "status": "analyzed",
+        "analyzedAt": "2026-08-03T14:02:06.860Z",
+        "slug": "wknd_site_us_en_adventures_bali-surf-camp_html--2e38a9c1"
+      },
+      "https://wknd.site/us/en/adventures/beervana-portland.html": {
+        "url": "https://wknd.site/us/en/adventures/beervana-portland.html",
+        "status": "analyzed",
+        "analyzedAt": "2026-08-03T14:02:07.568Z",
+        "slug": "wknd_site_us_en_adventures_beervana-portland_html--0539e503"
+      },
+      "https://wknd.site/us/en/adventures/colorado-rock-climbing.html": {
+        "url": "https://wknd.site/us/en/adventures/colorado-rock-climbing.html",
+        "status": "analyzed",
+        "analyzedAt": "2026-08-03T14:02:09.221Z",
+        "slug": "wknd_site_us_en_adventures_colorado-rock-climbing_html--f78265a4"
+      },
+      "https://wknd.site/us/en/adventures/cycling-southern-utah.html": {
+        "url": "https://wknd.site/us/en/adventures/cycling-southern-utah.html",
+        "status": "analyzed",
+        "analyzedAt": "2026-08-03T14:02:10.722Z",
+        "slug": "wknd_site_us_en_adventures_cycling-southern-utah_html--8648ab5a"
+      },
+      "https://wknd.site/us/en/adventures/cycling-tuscany.html": {
+        "url": "https://wknd.site/us/en/adventures/cycling-tuscany.html",
+        "status": "analyzed",
+        "analyzedAt": "2026-08-03T14:02:16.025Z",
+        "slug": "wknd_site_us_en_adventures_cycling-tuscany_html--09782ca4"
+      },
+      "https://wknd.site/us/en/adventures/gastronomic-marais-tour.html": {
+        "url": "https://wknd.site/us/en/adventures/gastronomic-marais-tour.html",
+        "status": "analyzed",
+        "analyzedAt": "2026-08-03T14:02:16.588Z",
+        "slug": "wknd_site_us_en_adventures_gastronomic-marais-tour_html--850c7841"
+      },
+      "https://wknd.site/us/en/adventures/napa-wine-tasting.html": {
+        "url": "https://wknd.site/us/en/adventures/napa-wine-tasting.html",
+        "status": "analyzed",
+        "analyzedAt": "2026-08-03T14:02:17.222Z",
+        "slug": "wknd_site_us_en_adventures_napa-wine-tasting_html--a2e48fd5"
+      },
+      "https://wknd.site/us/en/adventures/riverside-camping-australia.html": {
+        "url": "https://wknd.site/us/en/adventures/riverside-camping-australia.html",
+        "status": "analyzed",
+        "analyzedAt": "2026-08-03T14:02:18.758Z",
+        "slug": "wknd_site_us_en_adventures_riverside-camping-australia_html--68edd41a"
+      },
+      "https://wknd.site/us/en/adventures/ski-touring-mont-blanc.html": {
+        "url": "https://wknd.site/us/en/adventures/ski-touring-mont-blanc.html",
+        "status": "analyzed",
+        "analyzedAt": "2026-08-03T14:02:20.435Z",
+        "slug": "wknd_site_us_en_adventures_ski-touring-mont-blanc_html--ef585c81"
+      },
+      "https://wknd.site/us/en/adventures/surf-camp-costa-rica.html": {
+        "url": "https://wknd.site/us/en/adventures/surf-camp-costa-rica.html",
+        "status": "analyzed",
+        "analyzedAt": "2026-08-03T14:02:25.865Z",
+        "slug": "wknd_site_us_en_adventures_surf-camp-costa-rica_html--de076791"
+      },
+      "https://wknd.site/us/en/magazine/san-diego-surf.html": {
+        "url": "https://wknd.site/us/en/magazine/san-diego-surf.html",
+        "status": "analyzed",
+        "analyzedAt": "2026-08-03T14:02:27.518Z",
+        "slug": "wknd_site_us_en_magazine_san-diego-surf_html--efb2a09c"
+      },
+      "https://wknd.site/us/en/magazine/western-australia.html": {
+        "url": "https://wknd.site/us/en/magazine/western-australia.html",
+        "status": "analyzed",
+        "analyzedAt": "2026-08-03T14:02:28.688Z",
+        "slug": "wknd_site_us_en_magazine_western-australia_html--77a25244"
+      },
+      "https://wknd.site/us/en/magazine/guide-la-skateparks.html": {
+        "url": "https://wknd.site/us/en/magazine/guide-la-skateparks.html",
+        "status": "analyzed",
+        "analyzedAt": "2026-08-03T14:02:29.529Z",
+        "slug": "wknd_site_us_en_magazine_guide-la-skateparks_html--d457f548"
+      },
+      "https://wknd.site/us/en/magazine/ski-touring.html": {
+        "url": "https://wknd.site/us/en/magazine/ski-touring.html",
+        "status": "analyzed",
+        "analyzedAt": "2026-08-03T14:02:31.753Z",
+        "slug": "wknd_site_us_en_magazine_ski-touring_html--b1aaea2d"
+      },
+      "https://wknd.site/us/en/magazine/arctic-surfing.html": {
+        "url": "https://wknd.site/us/en/magazine/arctic-surfing.html",
+        "status": "analyzed",
+        "analyzedAt": "2026-08-03T14:02:37.221Z",
+        "slug": "wknd_site_us_en_magazine_arctic-surfing_html--7ce71719"
+      }
+    }
+  }
+}
