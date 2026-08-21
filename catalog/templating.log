@@ -1,0 +1,86 @@
+Session: TEMPLATING -> TEMPLATING
+Checklist complete: 26 terminal entries (26 analyzed, 0 failed)
+============================================================
+PAGE TEMPLATE DISCOVERY (Histogram + Signature)
+============================================================
+Config: /backups/Pranav-Joshi-Git/capstone-wknd/repo/catalog/.catalog-config.json
+Policy
+  representative selection: block_cover (max 10)
+  merge phase: top-section only (body shape never used in merge gate)
+  family_body_split: True
+  body matcher: column-shape signature, smaller-side fully paired
+
+PHASE 1: Loading Fingerprints
+----------------------------------------
+Loaded 26 page fingerprints
+
+PHASE 2: URL Grouping
+----------------------------------------
+URL grouping: 2 path groups + 5 root singletons
+  Group 1 (adventures): 16 pages
+  Group 2 (magazine): 5 pages
+
+PHASE 3: Local Seed Validation And Split (layout partition)
+----------------------------------------
+  Seed group 1 (16p): KEEP
+    reason: all pages share a layout descriptor
+  Seed group 2 (5p): KEEP
+    reason: all pages share a layout descriptor
+Layout-descriptor partition: 0 splits
+
+PHASE 4: Template Candidate Merging (top-section only)
+----------------------------------------
+Singletons before merge: 5
+
+Starting: 7 total (2 clusters, 5 singletons)
+Top-section merge gate: layout match (text=subsequence, visual=exact coverage bucket, representative-or-mode). Body split runs in Phase 5.
+
+Merging (single-loop HAC)
+  ✓ MERGE: -5 → -2  [sim: 100%]
+      https://wknd.site/us/en/magazine.html → https://wknd.site/us/en/adventures.html
+  ✓ MERGE: -1 → -2  [sim: 100%]
+      https://wknd.site/us/en/about-us.html → https://wknd.site/us/en/adventures.html
+  2 merges total (converged)
+
+==================================================
+MERGE SUMMARY
+==================================================
+Before: 7 clusters
+After:  5 clusters (3 multi-page, 2 singletons)
+Merged: 2 clusters (2 pages reassigned)
+==================================================
+
+
+PHASE 5: Family Body Split
+----------------------------------------
+  Family -4: 1p -> 1 template (pair_matches=0/0)
+  Family -3: 1p -> 1 template (pair_matches=0/0)
+  Family -2: 3p -> 2 templates [2, 1] (pair_matches=2/3)
+  Family 1: 16p -> 1 template (pair_matches=15/15)
+  Family 2: 5p -> 1 template (pair_matches=4/4)
+
+PHASE 6: Build Template Catalog
+----------------------------------------
+  Template candidate -4: 1p
+  Template candidate -3: 1p
+  Template candidate -2: 2p | representatives 2
+  Template candidate 1: 16p
+  Template candidate 2: 5p
+  Template candidate 3: 1p
+Built 6 templates
+
+PHASE 7: Saving Results
+----------------------------------------
+Saved: /backups/Pranav-Joshi-Git/capstone-wknd/repo/catalog/.clusters/pages.templates.json
+Saved: /backups/Pranav-Joshi-Git/capstone-wknd/repo/catalog/.clusters/pages.templates.grouped.json
+Saved: /backups/Pranav-Joshi-Git/capstone-wknd/repo/catalog/.clusters/pages.templates.summary.json
+Saved: /backups/Pranav-Joshi-Git/capstone-wknd/repo/catalog/.template-catalog-scoped.json
+
+PHASE 8: Template Report & Migration Bundle
+----------------------------------------
+  Report stats: 6 templates, 26 pages, 3 singletons, biggest family=16
+  Wrote bundle: /backups/Pranav-Joshi-Git/capstone-wknd/repo/catalog/template-catalog-report-bundle.zip
+
+Session: AWAITING_TUNING
+
+Template discovery complete: 6 templates, 3 singletons. Ready for tuning.

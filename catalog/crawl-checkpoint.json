@@ -1,0 +1,527 @@
+{
+  "queue": [],
+  "visited": [
+    "https://wknd.site/us/en.html",
+    "https://wknd.site/us/es.html",
+    "https://wknd.site/ca/en.html",
+    "https://wknd.site/ca/fr.html",
+    "https://wknd.site/ch/de.html",
+    "https://wknd.site/ch/fr.html",
+    "https://wknd.site/ch/it.html",
+    "https://wknd.site/de/de.html",
+    "https://wknd.site/fr/fr.html",
+    "https://wknd.site/es/es.html",
+    "https://wknd.site/it/it.html",
+    "https://wknd.site/us/en/magazine.html",
+    "https://wknd.site/us/en/adventures.html",
+    "https://wknd.site/us/en/faqs.html",
+    "https://wknd.site/us/en/about-us.html",
+    "https://wknd.site/us/en/magazine/san-diego-surf.html",
+    "https://wknd.site/us/en/adventures/downhill-skiing-wyoming.html",
+    "https://wknd.site/us/en/magazine/western-australia.html",
+    "https://wknd.site/us/en/magazine/guide-la-skateparks.html",
+    "https://wknd.site/us/en/magazine/ski-touring.html",
+    "https://wknd.site/us/en/magazine/arctic-surfing.html",
+    "https://wknd.site/us/en/adventures/climbing-new-zealand.html",
+    "https://wknd.site/us/en/adventures/yosemite-backpacking.html",
+    "https://wknd.site/us/en/adventures/whistler-mountain-biking.html",
+    "https://wknd.site/us/en/adventures/west-coast-cycling.html",
+    "https://wknd.site/us/en/adventures/tahoe-skiing.html",
+    "https://wknd.site/ca/en/magazine.html",
+    "https://wknd.site/ca/en/adventures.html",
+    "https://wknd.site/ca/en/faqs.html",
+    "https://wknd.site/ca/en/about-us.html",
+    "https://wknd.site/ca/en/magazine/san-diego-surf.html",
+    "https://wknd.site/ca/en/adventures/downhill-skiing-wyoming.html",
+    "https://wknd.site/ca/en/magazine/western-australia.html",
+    "https://wknd.site/ca/en/magazine/guide-la-skateparks.html",
+    "https://wknd.site/ca/en/magazine/ski-touring.html",
+    "https://wknd.site/ca/en/magazine/arctic-surfing.html",
+    "https://wknd.site/ca/en/adventures/climbing-new-zealand.html",
+    "https://wknd.site/ca/en/adventures/yosemite-backpacking.html",
+    "https://wknd.site/ca/en/adventures/whistler-mountain-biking.html",
+    "https://wknd.site/ca/en/adventures/west-coast-cycling.html",
+    "https://wknd.site/ca/en/adventures/tahoe-skiing.html",
+    "https://wknd.site/us/en/adventures/bali-surf-camp.html",
+    "https://wknd.site/us/en/adventures/beervana-portland.html",
+    "https://wknd.site/us/en/adventures/colorado-rock-climbing.html",
+    "https://wknd.site/us/en/adventures/cycling-southern-utah.html",
+    "https://wknd.site/us/en/adventures/cycling-tuscany.html",
+    "https://wknd.site/us/en/adventures/gastronomic-marais-tour.html",
+    "https://wknd.site/us/en/adventures/napa-wine-tasting.html",
+    "https://wknd.site/us/en/adventures/riverside-camping-australia.html",
+    "https://wknd.site/us/en/adventures/ski-touring-mont-blanc.html",
+    "https://wknd.site/us/en/adventures/surf-camp-costa-rica.html",
+    "https://wknd.site/content/dam/wknd-shared/en/magazine/la-skateparks/ultimateguidetolaskateparks.pdf.coredownload.pdf",
+    "https://wknd.site/ca/en/magazine/members-only/alaskan-adventure.html",
+    "https://wknd.site/ca/en/magazine/members-only/fly-fishing-the-amazon.html",
+    "https://wknd.site/ca/en/adventures/bali-surf-camp.html",
+    "https://wknd.site/ca/en/adventures/beervana-portland.html",
+    "https://wknd.site/ca/en/adventures/colorado-rock-climbing.html",
+    "https://wknd.site/ca/en/adventures/cycling-southern-utah.html",
+    "https://wknd.site/ca/en/adventures/cycling-tuscany.html",
+    "https://wknd.site/ca/en/adventures/gastronomic-marais-tour.html",
+    "https://wknd.site/ca/en/adventures/napa-wine-tasting.html",
+    "https://wknd.site/ca/en/adventures/riverside-camping-australia.html",
+    "https://wknd.site/ca/en/adventures/ski-touring-mont-blanc.html",
+    "https://wknd.site/ca/en/adventures/surf-camp-costa-rica.html",
+    "https://wknd.site/ca/en/magazine/members-only.html"
+  ],
+  "urls": [
+    {
+      "url": "https://wknd.site/us/en.html",
+      "method": "crawl",
+      "status": 200,
+      "retries": 0,
+      "finalUrl": "https://wknd.site/us/en.html"
+    },
+    {
+      "url": "https://wknd.site/us/es.html",
+      "method": "crawl",
+      "status": 200,
+      "retries": 0,
+      "finalUrl": "https://wknd.site/us/es.html"
+    },
+    {
+      "url": "https://wknd.site/ca/en.html",
+      "method": "crawl",
+      "status": 200,
+      "retries": 0,
+      "finalUrl": "https://wknd.site/ca/en.html"
+    },
+    {
+      "url": "https://wknd.site/ca/fr.html",
+      "method": "crawl",
+      "status": 200,
+      "retries": 0,
+      "finalUrl": "https://wknd.site/ca/fr.html"
+    },
+    {
+      "url": "https://wknd.site/ch/de.html",
+      "method": "crawl",
+      "status": 200,
+      "retries": 0,
+      "finalUrl": "https://wknd.site/ch/de.html"
+    },
+    {
+      "url": "https://wknd.site/ch/fr.html",
+      "method": "crawl",
+      "status": 200,
+      "retries": 0,
+      "finalUrl": "https://wknd.site/ch/fr.html"
+    },
+    {
+      "url": "https://wknd.site/ch/it.html",
+      "method": "crawl",
+      "status": 200,
+      "retries": 0,
+      "finalUrl": "https://wknd.site/ch/it.html"
+    },
+    {
+      "url": "https://wknd.site/de/de.html",
+      "method": "crawl",
+      "status": 200,
+      "retries": 0,
+      "finalUrl": "https://wknd.site/de/de.html"
+    },
+    {
+      "url": "https://wknd.site/fr/fr.html",
+      "method": "crawl",
+      "status": 200,
+      "retries": 0,
+      "finalUrl": "https://wknd.site/fr/fr.html"
+    },
+    {
+      "url": "https://wknd.site/es/es.html",
+      "method": "crawl",
+      "status": 200,
+      "retries": 0,
+      "finalUrl": "https://wknd.site/es/es.html"
+    },
+    {
+      "url": "https://wknd.site/it/it.html",
+      "method": "crawl",
+      "status": 200,
+      "retries": 0,
+      "finalUrl": "https://wknd.site/it/it.html"
+    },
+    {
+      "url": "https://wknd.site/us/en/magazine.html",
+      "method": "crawl",
+      "status": 200,
+      "retries": 0,
+      "finalUrl": "https://wknd.site/us/en/magazine.html"
+    },
+    {
+      "url": "https://wknd.site/us/en/adventures.html",
+      "method": "crawl",
+      "status": 200,
+      "retries": 0,
+      "finalUrl": "https://wknd.site/us/en/adventures.html"
+    },
+    {
+      "url": "https://wknd.site/us/en/faqs.html",
+      "method": "crawl",
+      "status": 200,
+      "retries": 0,
+      "finalUrl": "https://wknd.site/us/en/faqs.html"
+    },
+    {
+      "url": "https://wknd.site/us/en/about-us.html",
+      "method": "crawl",
+      "status": 200,
+      "retries": 0,
+      "finalUrl": "https://wknd.site/us/en/about-us.html"
+    },
+    {
+      "url": "https://wknd.site/us/en/magazine/san-diego-surf.html",
+      "method": "crawl",
+      "status": 200,
+      "retries": 0,
+      "finalUrl": "https://wknd.site/us/en/magazine/san-diego-surf.html"
+    },
+    {
+      "url": "https://wknd.site/us/en/adventures/downhill-skiing-wyoming.html",
+      "method": "crawl",
+      "status": 200,
+      "retries": 0,
+      "finalUrl": "https://wknd.site/us/en/adventures/downhill-skiing-wyoming.html"
+    },
+    {
+      "url": "https://wknd.site/us/en/magazine/western-australia.html",
+      "method": "crawl",
+      "status": 200,
+      "retries": 0,
+      "finalUrl": "https://wknd.site/us/en/magazine/western-australia.html"
+    },
+    {
+      "url": "https://wknd.site/us/en/magazine/guide-la-skateparks.html",
+      "method": "crawl",
+      "status": 200,
+      "retries": 0,
+      "finalUrl": "https://wknd.site/us/en/magazine/guide-la-skateparks.html"
+    },
+    {
+      "url": "https://wknd.site/us/en/magazine/ski-touring.html",
+      "method": "crawl",
+      "status": 200,
+      "retries": 0,
+      "finalUrl": "https://wknd.site/us/en/magazine/ski-touring.html"
+    },
+    {
+      "url": "https://wknd.site/us/en/magazine/arctic-surfing.html",
+      "method": "crawl",
+      "status": 200,
+      "retries": 0,
+      "finalUrl": "https://wknd.site/us/en/magazine/arctic-surfing.html"
+    },
+    {
+      "url": "https://wknd.site/us/en/adventures/climbing-new-zealand.html",
+      "method": "crawl",
+      "status": 200,
+      "retries": 0,
+      "finalUrl": "https://wknd.site/us/en/adventures/climbing-new-zealand.html"
+    },
+    {
+      "url": "https://wknd.site/us/en/adventures/yosemite-backpacking.html",
+      "method": "crawl",
+      "status": 200,
+      "retries": 0,
+      "finalUrl": "https://wknd.site/us/en/adventures/yosemite-backpacking.html"
+    },
+    {
+      "url": "https://wknd.site/us/en/adventures/whistler-mountain-biking.html",
+      "method": "crawl",
+      "status": 200,
+      "retries": 0,
+      "finalUrl": "https://wknd.site/us/en/adventures/whistler-mountain-biking.html"
+    },
+    {
+      "url": "https://wknd.site/us/en/adventures/west-coast-cycling.html",
+      "method": "crawl",
+      "status": 200,
+      "retries": 0,
+      "finalUrl": "https://wknd.site/us/en/adventures/west-coast-cycling.html"
+    },
+    {
+      "url": "https://wknd.site/us/en/adventures/tahoe-skiing.html",
+      "method": "crawl",
+      "status": 200,
+      "retries": 0,
+      "finalUrl": "https://wknd.site/us/en/adventures/tahoe-skiing.html"
+    },
+    {
+      "url": "https://wknd.site/ca/en/magazine.html",
+      "method": "crawl",
+      "status": 200,
+      "retries": 0,
+      "finalUrl": "https://wknd.site/ca/en/magazine.html"
+    },
+    {
+      "url": "https://wknd.site/ca/en/adventures.html",
+      "method": "crawl",
+      "status": 200,
+      "retries": 0,
+      "finalUrl": "https://wknd.site/ca/en/adventures.html"
+    },
+    {
+      "url": "https://wknd.site/ca/en/faqs.html",
+      "method": "crawl",
+      "status": 200,
+      "retries": 0,
+      "finalUrl": "https://wknd.site/ca/en/faqs.html"
+    },
+    {
+      "url": "https://wknd.site/ca/en/about-us.html",
+      "method": "crawl",
+      "status": 200,
+      "retries": 0,
+      "finalUrl": "https://wknd.site/ca/en/about-us.html"
+    },
+    {
+      "url": "https://wknd.site/ca/en/magazine/san-diego-surf.html",
+      "method": "crawl",
+      "status": 200,
+      "retries": 0,
+      "finalUrl": "https://wknd.site/ca/en/magazine/san-diego-surf.html"
+    },
+    {
+      "url": "https://wknd.site/ca/en/adventures/downhill-skiing-wyoming.html",
+      "method": "crawl",
+      "status": 200,
+      "retries": 0,
+      "finalUrl": "https://wknd.site/ca/en/adventures/downhill-skiing-wyoming.html"
+    },
+    {
+      "url": "https://wknd.site/ca/en/magazine/western-australia.html",
+      "method": "crawl",
+      "status": 200,
+      "retries": 0,
+      "finalUrl": "https://wknd.site/ca/en/magazine/western-australia.html"
+    },
+    {
+      "url": "https://wknd.site/ca/en/magazine/guide-la-skateparks.html",
+      "method": "crawl",
+      "status": 200,
+      "retries": 0,
+      "finalUrl": "https://wknd.site/ca/en/magazine/guide-la-skateparks.html"
+    },
+    {
+      "url": "https://wknd.site/ca/en/magazine/ski-touring.html",
+      "method": "crawl",
+      "status": 200,
+      "retries": 0,
+      "finalUrl": "https://wknd.site/ca/en/magazine/ski-touring.html"
+    },
+    {
+      "url": "https://wknd.site/ca/en/magazine/arctic-surfing.html",
+      "method": "crawl",
+      "status": 200,
+      "retries": 0,
+      "finalUrl": "https://wknd.site/ca/en/magazine/arctic-surfing.html"
+    },
+    {
+      "url": "https://wknd.site/ca/en/adventures/climbing-new-zealand.html",
+      "method": "crawl",
+      "status": 200,
+      "retries": 0,
+      "finalUrl": "https://wknd.site/ca/en/adventures/climbing-new-zealand.html"
+    },
+    {
+      "url": "https://wknd.site/ca/en/adventures/yosemite-backpacking.html",
+      "method": "crawl",
+      "status": 200,
+      "retries": 0,
+      "finalUrl": "https://wknd.site/ca/en/adventures/yosemite-backpacking.html"
+    },
+    {
+      "url": "https://wknd.site/ca/en/adventures/whistler-mountain-biking.html",
+      "method": "crawl",
+      "status": 200,
+      "retries": 0,
+      "finalUrl": "https://wknd.site/ca/en/adventures/whistler-mountain-biking.html"
+    },
+    {
+      "url": "https://wknd.site/ca/en/adventures/west-coast-cycling.html",
+      "method": "crawl",
+      "status": 200,
+      "retries": 0,
+      "finalUrl": "https://wknd.site/ca/en/adventures/west-coast-cycling.html"
+    },
+    {
+      "url": "https://wknd.site/ca/en/adventures/tahoe-skiing.html",
+      "method": "crawl",
+      "status": 200,
+      "retries": 0,
+      "finalUrl": "https://wknd.site/ca/en/adventures/tahoe-skiing.html"
+    },
+    {
+      "url": "https://wknd.site/us/en/adventures/bali-surf-camp.html",
+      "method": "crawl",
+      "status": 200,
+      "retries": 0,
+      "finalUrl": "https://wknd.site/us/en/adventures/bali-surf-camp.html"
+    },
+    {
+      "url": "https://wknd.site/us/en/adventures/beervana-portland.html",
+      "method": "crawl",
+      "status": 200,
+      "retries": 0,
+      "finalUrl": "https://wknd.site/us/en/adventures/beervana-portland.html"
+    },
+    {
+      "url": "https://wknd.site/us/en/adventures/colorado-rock-climbing.html",
+      "method": "crawl",
+      "status": 200,
+      "retries": 0,
+      "finalUrl": "https://wknd.site/us/en/adventures/colorado-rock-climbing.html"
+    },
+    {
+      "url": "https://wknd.site/us/en/adventures/cycling-southern-utah.html",
+      "method": "crawl",
+      "status": 200,
+      "retries": 0,
+      "finalUrl": "https://wknd.site/us/en/adventures/cycling-southern-utah.html"
+    },
+    {
+      "url": "https://wknd.site/us/en/adventures/cycling-tuscany.html",
+      "method": "crawl",
+      "status": 200,
+      "retries": 0,
+      "finalUrl": "https://wknd.site/us/en/adventures/cycling-tuscany.html"
+    },
+    {
+      "url": "https://wknd.site/us/en/adventures/gastronomic-marais-tour.html",
+      "method": "crawl",
+      "status": 200,
+      "retries": 0,
+      "finalUrl": "https://wknd.site/us/en/adventures/gastronomic-marais-tour.html"
+    },
+    {
+      "url": "https://wknd.site/us/en/adventures/napa-wine-tasting.html",
+      "method": "crawl",
+      "status": 200,
+      "retries": 0,
+      "finalUrl": "https://wknd.site/us/en/adventures/napa-wine-tasting.html"
+    },
+    {
+      "url": "https://wknd.site/us/en/adventures/riverside-camping-australia.html",
+      "method": "crawl",
+      "status": 200,
+      "retries": 0,
+      "finalUrl": "https://wknd.site/us/en/adventures/riverside-camping-australia.html"
+    },
+    {
+      "url": "https://wknd.site/us/en/adventures/ski-touring-mont-blanc.html",
+      "method": "crawl",
+      "status": 200,
+      "retries": 0,
+      "finalUrl": "https://wknd.site/us/en/adventures/ski-touring-mont-blanc.html"
+    },
+    {
+      "url": "https://wknd.site/us/en/adventures/surf-camp-costa-rica.html",
+      "method": "crawl",
+      "status": 200,
+      "retries": 0,
+      "finalUrl": "https://wknd.site/us/en/adventures/surf-camp-costa-rica.html"
+    },
+    {
+      "url": "https://wknd.site/content/dam/wknd-shared/en/magazine/la-skateparks/ultimateguidetolaskateparks.pdf.coredownload.pdf",
+      "method": "crawl",
+      "status": 200,
+      "retries": 0,
+      "finalUrl": "https://wknd.site/content/dam/wknd-shared/en/magazine/la-skateparks/ultimateguidetolaskateparks.pdf.coredownload.pdf"
+    },
+    {
+      "url": "https://wknd.site/ca/en/magazine/members-only/alaskan-adventure.html",
+      "method": "crawl",
+      "status": 200,
+      "retries": 0,
+      "finalUrl": "https://wknd.site/ca/en/magazine/members-only/alaskan-adventure.html"
+    },
+    {
+      "url": "https://wknd.site/ca/en/magazine/members-only/fly-fishing-the-amazon.html",
+      "method": "crawl",
+      "status": 200,
+      "retries": 0,
+      "finalUrl": "https://wknd.site/ca/en/magazine/members-only/fly-fishing-the-amazon.html"
+    },
+    {
+      "url": "https://wknd.site/ca/en/adventures/bali-surf-camp.html",
+      "method": "crawl",
+      "status": 200,
+      "retries": 0,
+      "finalUrl": "https://wknd.site/ca/en/adventures/bali-surf-camp.html"
+    },
+    {
+      "url": "https://wknd.site/ca/en/adventures/beervana-portland.html",
+      "method": "crawl",
+      "status": 200,
+      "retries": 0,
+      "finalUrl": "https://wknd.site/ca/en/adventures/beervana-portland.html"
+    },
+    {
+      "url": "https://wknd.site/ca/en/adventures/colorado-rock-climbing.html",
+      "method": "crawl",
+      "status": 200,
+      "retries": 0,
+      "finalUrl": "https://wknd.site/ca/en/adventures/colorado-rock-climbing.html"
+    },
+    {
+      "url": "https://wknd.site/ca/en/adventures/cycling-southern-utah.html",
+      "method": "crawl",
+      "status": 200,
+      "retries": 0,
+      "finalUrl": "https://wknd.site/ca/en/adventures/cycling-southern-utah.html"
+    },
+    {
+      "url": "https://wknd.site/ca/en/adventures/cycling-tuscany.html",
+      "method": "crawl",
+      "status": 200,
+      "retries": 0,
+      "finalUrl": "https://wknd.site/ca/en/adventures/cycling-tuscany.html"
+    },
+    {
+      "url": "https://wknd.site/ca/en/adventures/gastronomic-marais-tour.html",
+      "method": "crawl",
+      "status": 200,
+      "retries": 0,
+      "finalUrl": "https://wknd.site/ca/en/adventures/gastronomic-marais-tour.html"
+    },
+    {
+      "url": "https://wknd.site/ca/en/adventures/napa-wine-tasting.html",
+      "method": "crawl",
+      "status": 200,
+      "retries": 0,
+      "finalUrl": "https://wknd.site/ca/en/adventures/napa-wine-tasting.html"
+    },
+    {
+      "url": "https://wknd.site/ca/en/adventures/riverside-camping-australia.html",
+      "method": "crawl",
+      "status": 200,
+      "retries": 0,
+      "finalUrl": "https://wknd.site/ca/en/adventures/riverside-camping-australia.html"
+    },
+    {
+      "url": "https://wknd.site/ca/en/adventures/ski-touring-mont-blanc.html",
+      "method": "crawl",
+      "status": 200,
+      "retries": 0,
+      "finalUrl": "https://wknd.site/ca/en/adventures/ski-touring-mont-blanc.html"
+    },
+    {
+      "url": "https://wknd.site/ca/en/adventures/surf-camp-costa-rica.html",
+      "method": "crawl",
+      "status": 200,
+      "retries": 0,
+      "finalUrl": "https://wknd.site/ca/en/adventures/surf-camp-costa-rica.html"
+    },
+    {
+      "url": "https://wknd.site/ca/en/magazine/members-only.html",
+      "method": "crawl",
+      "status": 200,
+      "retries": 0,
+      "finalUrl": "https://wknd.site/ca/en/magazine/members-only.html"
+    }
+  ]
+}
